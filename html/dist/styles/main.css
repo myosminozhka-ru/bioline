@@ -476,6 +476,7 @@ img {
   display: flex;
   justify-content: space-between;
   padding-bottom: 35px;
+  padding-top: 37px;
 }
 
 .header__t--l {
@@ -490,7 +491,6 @@ img {
 
 .header__t--r {
   width: 100%;
-  margin-top: 37px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -681,6 +681,44 @@ img {
   color: #FFFFFF;
 }
 
+.main_blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main_blocks__block {
+  width: calc(25% - 60px);
+  margin-bottom: 60px;
+}
+
+.main_blocks__block--img {
+  font-size: 0;
+  min-height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 32px;
+}
+
+.main_blocks__block--title {
+  font-family: 'gm', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #26364B;
+  margin-bottom: 18px;
+}
+
+.main_blocks__block--text {
+  font-family: 'gml', serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  color: #26364B;
+}
+
 .footer {
   background: #66C9BA url("../img/fot_bg.png") 0 0/cover no-repeat;
   border-radius: 122px 112px 0 0;
@@ -858,6 +896,11 @@ img {
 @media all and (max-width: 1160px) {
   .header__t--l {
     margin-right: 20px;
+  }
+
+  .main_blocks__block {
+    width: calc(50% - 20px);
+    margin-bottom: 55px;
   }
 }
 
@@ -1095,16 +1138,13 @@ img {
 
   .header__t {
     align-items: flex-end;
+    padding-top: 11px;
   }
 
   .header__t--l {
     flex: none;
     max-width: 145px;
     width: 100%;
-  }
-
-  .header__t--r {
-    margin-top: 11px;
   }
 
   .header__t--tt {
@@ -1233,6 +1273,28 @@ img {
   }
 
   .block_info__text--text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .main_blocks {
+    margin-bottom: -44px;
+  }
+
+  .main_blocks__block--img {
+    max-height: 45px;
+    max-width: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    margin-bottom: 25px;
+  }
+
+  .main_blocks__block--title {
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+
+  .main_blocks__block--text {
     font-size: 12px;
     line-height: 15px;
   }
