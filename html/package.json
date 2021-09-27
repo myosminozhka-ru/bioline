@@ -72,6 +72,8 @@
     },
     "dependencies": {
         "jquery": "^3.6.0",
+        "lightgallery": "^2.2.1",
+        "slick-carousel": "^1.8.1",
         "smart-grid": "^2.1.2"
     },
     "husky": {
