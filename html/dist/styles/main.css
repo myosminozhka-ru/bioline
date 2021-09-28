@@ -2419,11 +2419,16 @@ img {
   left: 0;
   position: absolute;
   z-index: 10;
-  display: none;
+  transition: all .3s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .main_map__l--pop.active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .main_map__l--cls {
