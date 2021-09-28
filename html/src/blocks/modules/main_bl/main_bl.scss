@@ -1,0 +1,95 @@
+.main_bl {
+    background: #FFF7F3;
+    border-radius: 200px 0 200px 0;
+    padding-top: 130px;
+    padding-bottom: 293px;
+    margin-bottom: -355px;
+    @media all and (max-width: 980px) {
+        border-radius: 70px 0 70px 0;
+    }
+    @media all and (max-width: 640px) {
+        padding-top: 50px;
+        margin-bottom: -268px;
+        padding-bottom: 226px;
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 115px;
+        @media all and (max-width: 980px) {
+            flex-direction: column;
+            margin-bottom: 78px;
+        }
+        &--l {
+            width: 50%;
+            @media all and (max-width: 980px) {
+                width: 100%;
+                margin-bottom: 23px;
+            }
+        }
+        &--title {
+            margin-bottom: 19px;
+            font-family: 'gmm', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 60px;
+            color: #26364B;
+            @media all and (max-width: 980px) {
+                br {
+                    display: none;
+                }
+            }
+            @media all and (max-width: 640px) {
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 27px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        &--text {
+            font-family: 'gml', serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 30px;
+            color: #3D3D3D;
+            max-width: 422px;
+            width: 100%;
+            @media all and (max-width: 980px) {
+                max-width: 100%;
+            }
+            @media all and (max-width: 640px) {
+                font-size: 14px;
+                padding-left: 15px;
+                padding-right: 15px;
+                line-height: 18px;
+            }
+        }
+        &--r {
+            width: 50%;
+            text-align: right;
+            img {
+                margin-left: auto;
+                max-width: 624px;
+                width: 100%;
+            }
+            iframe {
+                width: 100% !important;
+            }
+            @media all and (max-width: 980px) {
+                width: 100%;
+                text-align: center;
+                iframe {
+                    height: 344px !important;
+                }
+            }
+            @media all and (max-width: 640px) {
+                iframe {
+                    height: 224px !important;
+                }
+            }
+        }
+    }
+}

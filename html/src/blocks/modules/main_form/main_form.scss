@@ -1,0 +1,159 @@
+.main_form {
+    max-width: 1668px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -117px;
+    position: relative;
+    @media all and (max-width: 1700px) {
+        max-width: calc(100% - 30px);
+    }
+    @media all and (max-width: 640px) {
+        margin-bottom: -95px;
+    }
+    &__title {
+        text-align: center;
+        font-family: 'gmm', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        color: #26364B;
+        margin-bottom: 38px;
+        br {
+            display: none;
+        }
+        @media all and (max-width: 640px) {
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 24px;
+        }
+        @media all and (max-width: 480px) {
+            br {
+                display: block;
+            }
+        }
+    }
+    &__fr {
+        background: url(../img/bg4.png) 0 50% no-repeat, #66C9BA url(../img/bg3.png) 0 no-repeat;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        padding: 103px 10px 83px 10px;
+        @media all and (max-width: 640px) {
+            padding-top: 41px;
+            padding-bottom: 52px;
+            padding-left: 14px;
+            padding-right: 14px;
+            border-radius: 30px;
+            box-shadow: none;
+        }
+    }
+    &__ques {
+        font-family: 'gmm', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 100px;
+        @media all and (max-width: 640px) {
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 66px;
+            text-align: center;
+        }
+    }
+    &__answ {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 105px;
+        @media all and (max-width: 640px) {
+            justify-content: space-between;
+        }
+    }
+    &__button {
+        transition: all .3s ease-out;
+        font-family: 'gmm', serif;
+        display: block;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #66C9BA;
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 26px 10px;
+        text-align: center;
+        min-width: 199px;
+        margin-left: 66px;
+        margin-right: 66px;
+        &:hover {
+            box-shadow: 8px 8px 0px 0px #dcf3ef;
+        }
+        @media all and (max-width: 640px) {
+            font-size: 20px;
+            min-width: 104px;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 12px 10px;
+            &:hover {
+                box-shadow: 4px 4px 0px 0px #dcf3ef;
+            }
+        }
+    }
+    &__next {
+        margin-left: auto;
+        max-width: 311px;
+        width: 100%;
+        font-family: 'gmm', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #66C9BA;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        text-align: center;
+        padding: 25px 10px;
+        cursor: pointer;
+        position: relative;
+        padding-right: 70px;
+        transition: all .3s ease-out;
+        &:before {
+            content: '';
+            width: 64px;
+            height: 64px;
+            display: block;
+            right: 27px;
+            top: 50%;
+            margin-top: -32px;
+            position: absolute;
+            border: 1px solid #FFFFFF;
+            border-radius: 50%;
+            background: url("data:image/svg+xml,%3Csvg width='19' height='33' viewBox='0 0 19 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.7857 15.9641L3.00939 1.18781C2.52021 0.715367 1.74071 0.728931 1.26827 1.21811C0.807372 1.69531 0.807372 2.4518 1.26827 2.92893L15.174 16.8347L1.26827 30.7405C0.787531 31.2213 0.787531 32.0008 1.26827 32.4816C1.74915 32.9623 2.52858 32.9623 3.00939 32.4816L17.7857 17.7053C18.2665 17.2244 18.2665 16.445 17.7857 15.9641Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+        &:hover {
+            box-shadow: 8px 8px 0px 0px #dcf3ef;
+        }
+        @media all and (max-width: 640px) {
+            margin-right: auto;
+            font-size: 20px;
+            max-width: 171px;
+            padding: 15px 10px;
+            padding-right: 60px;
+            &:before {
+                width: 35px;
+                height: 35px;
+                background-size: 9px;
+                margin-top: -17px;
+                right: 24px;
+            }
+            &:hover {
+                box-shadow: 4px 4px 0px 0px #dcf3ef;
+            }
+        }
+    }
+}

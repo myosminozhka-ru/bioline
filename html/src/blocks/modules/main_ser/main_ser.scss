@@ -83,7 +83,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-.lg-show-in .lg-prev {
+.lg-container .lg-prev {
     &:after {
         display: none !important; 
     }
@@ -97,7 +97,7 @@
         display: none !important;
     }
 }
-.lg-show-in .lg-next {
+.lg-container .lg-next {
     &:before {
         display: none !important; 
     }

@@ -1,10 +1,19 @@
 .main_wrk {
     background: #FFF7F3;
     border-radius: 200px 0 200px 0;
-    padding-top: 290px;
+    padding-top: 276px;
+    overflow: hidden;
     padding-bottom: 169px;
+    @media all and (max-width: 640px) {
+        padding-bottom: 87px;
+        border-radius: 70px 0 70px 0;
+        padding-top: 114px;
+    }
     &__in {
-
+        @media all and (max-width: 640px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     &__title {
         font-family: 'gmm', serif;
@@ -14,12 +23,23 @@
         line-height: 60px;
         color: #26364B;
         margin-bottom: 60px;
+        @media all and (max-width: 640px) {
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 46px;
+        }
     }
     &__block {
         background: #FFFFFF;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
         padding: 26px 10px 37px 18px;
+        @media all and (max-width: 640px) {
+            padding-bottom: 27px;
+            padding-left: 14px;
+        }
     }
     .slick-slide {
         margin: 15px 10px;
@@ -42,6 +62,10 @@
             font-size: 16px;
             color: #FF5000;
             margin-bottom: 34px;
+            @media all and (max-width: 640px) {
+                margin-bottom: 20px;
+                font-size: 12px;
+            }
         }
         &--name {
             margin-bottom: 13px;
@@ -51,6 +75,11 @@
             font-size: 22px;
             line-height: 28px;
             color: #26364B;
+            @media all and (max-width: 640px) {
+                font-size: 18px;
+                margin-bottom: 8px;
+                line-height: 23px;
+            }
         }
         &--wrk {
             font-family: 'gml', serif;
@@ -59,6 +88,10 @@
             font-size: 14px;
             color: #BABABA;
             margin-bottom: 33px;
+            @media all and (max-width: 640px) {
+                font-size: 12px;
+                margin-bottom: 30px;
+            }
         }
         &--r {
             flex: 0 0 145px;
@@ -66,6 +99,9 @@
             img {
                 border-radius: 50%;
                 overflow: hidden;
+            }
+            @media all and (max-width: 640px) {
+                flex: 0 0 98px;
             }
         }
         &--spec {
@@ -77,6 +113,10 @@
                 font-weight: normal;
                 font-size: 14px;
                 color: #26364B;
+                @media all and (max-width: 640px) {
+                    margin-bottom: 15px;
+                    font-size: 12px;
+                }
             }
             p {
                 display: block;
@@ -87,6 +127,10 @@
                 font-size: 14px;
                 line-height: 18px;
                 color: #26364B;
+                @media all and (max-width: 640px) {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
             }
         }
     }
