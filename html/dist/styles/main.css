@@ -1996,7 +1996,7 @@ img {
   margin-top: 60px;
   margin-bottom: 80px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   max-width: 1075px;
   width: 100%;
@@ -2013,7 +2013,6 @@ img {
   line-height: 50px;
   text-transform: capitalize;
   color: #FFFFFF;
-  padding-top: 55px;
 }
 
 .main_form__ques--r {
