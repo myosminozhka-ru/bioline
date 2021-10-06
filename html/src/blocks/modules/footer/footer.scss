@@ -141,6 +141,10 @@
                     margin-right: 15px;
                     margin-bottom: 30px;
                 }
+                transition: all .3s ease-out;
+                &:hover {
+                    opacity: .7;
+                }
             }
         }
         &--tel {
@@ -157,6 +161,13 @@
             @media all and (max-width: 830px) {
                 margin: 0;
                 margin-bottom: 32px;
+            }
+            border-bottom: 5px solid transparent;
+            padding-bottom: 2px;
+            padding-top: 2px;
+            transition: all .3s ease-out;
+            &:hover { 
+                border-color: #FFf;
             }
         }
     }

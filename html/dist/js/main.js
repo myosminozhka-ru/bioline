@@ -248,17 +248,22 @@ __webpack_require__.r(__webpack_exports__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l--title').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l--pop').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.mainmap__l--pop').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent('li').toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent('li').find('.main_map__l--pop').toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l--cls').on('click', function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l--pop').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l li').removeClass('active');
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l--pp').on('click', function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l--pop').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l li').removeClass('active');
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
       if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.main_map__l--pop').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.main_map__l--title').length) return;
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l--pop').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_map__l li').removeClass('active');
     });
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.feedback').click(function () {
