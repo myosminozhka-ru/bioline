@@ -3459,6 +3459,10 @@ img {
     padding: 16px 10px;
   }
 
+  .main_form.results .main_form__fr {
+    padding-top: 32px !important;
+  }
+
   .main_map__title {
     margin-bottom: 0;
   }
