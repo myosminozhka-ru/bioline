@@ -2013,6 +2013,7 @@ img {
   line-height: 50px;
   text-transform: capitalize;
   color: #FFFFFF;
+  padding-top: 55px;
 }
 
 .main_form__ques--r {
@@ -3343,6 +3344,7 @@ img {
   .main_form__ques--l {
     font-size: 24px;
     text-align: center;
+    padding-top: 0;
     width: 100%;
     margin-bottom: 50px;
     line-height: normal;
