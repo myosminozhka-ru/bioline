@@ -2093,7 +2093,8 @@ img {
 }
 
 .main_form.results .main_form__fr {
-  padding-bottom: 0 !important;
+  background: url(../img/bg4.png) 0 50% no-repeat, url(../img/img6.png) 100% 100% no-repeat, #66C9BA url(../img/bg3.png) 0 no-repeat;
+  box-shadow: none;
 }
 
 .main_form__result {
@@ -2105,6 +2106,7 @@ img {
 .main_form__result--l {
   width: 100%;
   margin-bottom: auto;
+  max-width: 940px;
 }
 
 .main_form__result--title {
@@ -2113,18 +2115,70 @@ img {
   font-weight: 500;
   font-size: 40px;
   color: #FFFFFF;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 
 .main_form__result--text {
-  font-family: 'gmm', serif;
+  font-family: 'gm', serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 45px;
-  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
   color: #FFFFFF;
-  margin-bottom: 85px;
+  margin-bottom: 40px;
+}
+
+.main_form__result--list {
+  width: calc(100% + 40px);
+  margin-bottom: 45px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main_form__result--list ul {
+  list-style: none;
+  padding: 0;
+  width: calc(33% - 20px);
+  margin: 0;
+}
+
+.main_form__result--list ul li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 50px;
+}
+
+.main_form__result--list ul li:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: 0;
+  top: 0px;
+  border: 1px solid #fff;
+  background: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L5.5 10L13 1' stroke='white' stroke-linecap='round'/%3E%3C/svg%3E%0A") 50% no-repeat;
+}
+
+.main_form__result--tit {
+  font-family: 'gm', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+.main_form__result--txt {
+  font-family: 'gm', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
 }
 
 .main_form__result--btn {
@@ -2143,6 +2197,7 @@ img {
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 35.5px 10px;
+  margin-top: 60px;
 }
 
 .main_form__result--btn:hover {
@@ -3124,6 +3179,16 @@ img {
   }
 }
 
+@media all and (max-width: 1540px) {
+  .main_form.results .main_form__fr {
+    background: url(../img/bg4.png) 0 50% no-repeat, #66C9BA url(../img/bg3.png) 0 no-repeat;
+  }
+
+  .main_form__result--l {
+    max-width: 100%;
+  }
+}
+
 @media all and (max-width: 1400px) {
   .footer__t--logo {
     margin-right: 40px;
@@ -3202,7 +3267,6 @@ img {
 @media all and (max-width: 1080px) {
   .main_form__result {
     flex-direction: column;
-    text-align: center;
   }
 
   .main_form__result--btn {
@@ -3564,6 +3628,21 @@ img {
 
   .main_form.results .main_form__fr {
     padding-top: 32px !important;
+    padding-bottom: 40px;
+    background: #66C9BA;
+  }
+
+  .main_form__result--list {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .main_form__result--list ul {
+    width: calc(50% - 20px);
+  }
+
+  .main_form__result--btn {
+    margin-top: 40px;
   }
 
   .main_map__title {
@@ -3899,6 +3978,12 @@ img {
   }
 }
 
+@media all and (max-width: 768px) {
+  .main_form__result--list ul {
+    width: 100%;
+  }
+}
+
 @media all and (max-width: 640px) {
   .main_bl {
     padding-top: 50px;
@@ -3943,10 +4028,15 @@ img {
     box-shadow: none;
   }
 
+  .main_form.results .main_form__title {
+    text-align: left !important;
+  }
+
   .main_form__result--title {
-    margin-bottom: 43px;
     font-size: 24px;
     line-height: normal;
+    text-align: left;
+    margin-bottom: 40px;
   }
 
   .main_form__result--text {
@@ -3955,10 +4045,35 @@ img {
     line-height: 23px;
   }
 
+  .main_form__result--list ul li:before {
+    top: 50%;
+    margin-top: -15px;
+  }
+
+  .main_form__result--list ul li.full_info:before {
+    margin-top: -35px;
+  }
+
+  .main_form__result--list ul li {
+    margin-bottom: 20px;
+    padding-left: 45px;
+  }
+
+  .main_form__result--tit {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .main_form__result--txt {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
   .main_form__result--btn {
     font-size: 13px;
     padding: 16px 10px;
     max-width: 205px;
+    margin-bottom: 0;
   }
 
   .main_form__result--r {
@@ -3981,7 +4096,8 @@ img {
     padding-right: 30px;
     font-size: 24px;
     line-height: 30px;
-    margin-bottom: 46px;
+    margin-bottom: 36px;
+    margin-top: 30px;
   }
 
   .main_wrk__block {
