@@ -359,3 +359,97 @@
         }
     }
 }
+.map_foot {
+    background: #DCF3EF;
+    border-radius: 30px;    
+    max-width: 1668px;
+    width: 100%;    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding-top: 45px;
+    padding-bottom: 40px;
+    @media all and (max-width: 1700px) {
+        max-width: calc(100% - 30px);
+    }
+    @media all and (max-width: 830px) {
+        padding-top: 36px;
+        padding-bottom: 42px;
+    }
+    &__in {
+        max-width: 1105px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &__l {
+        width: 50%;
+        font-family: 'gm', serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 45px;
+        color: #26364B;
+        br {
+            display: none;
+        }
+        @media all and (max-width: 1023px) {
+            margin-bottom: 18px;
+            line-height: normal;
+            width: 100%;
+        }
+        @media all and (max-width: 830px) {
+            font-size: 18px;
+            line-height: 23px;
+            br {
+                display: block;
+            }
+        }
+    }
+    &__r {
+        width: 50%;
+        text-align: center;
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+    &__link {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 409px;
+        width: 100%;
+        text-decoration: none;
+        background: #66C9BA;
+        border-radius: 10px;            
+        font-family: 'gmm', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 35px 10px;
+        display: block;
+        text-align: center;
+        transition: all .3s ease-out;
+        border: 1px solid #66C9BA;
+        &:hover {
+            background: #fff;
+            color: #66C9BA;
+        }
+        @media all and (max-width: 830px) {
+            font-size: 13px;
+            padding-top: 17px;
+            padding-bottom: 16px;
+            max-width: 265px;
+        }
+    }
+}

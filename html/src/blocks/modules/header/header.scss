@@ -163,6 +163,9 @@
     }
     &__in {
         margin-bottom: -105px;
+        @media all and (max-width: 1023px) {
+            background: radial-gradient(50% 50% at 20% 63%, #ffb08c66 0%, rgba(255, 196, 169, 0) 100%);
+        }
     }
     &__t {
         display: flex;
@@ -317,8 +320,10 @@
         &--l {
             flex: 0 0 490px;
             font-size: 0;
+            background: radial-gradient(51% 50% at 50% 80%, #FFB08C 0%, rgba(255, 196, 169, 0) 100%);
             margin-right: 25px;
             @media all and (max-width: 1023px) {
+                background: none;
                 margin-right: 0;
                 position: absolute;
                 flex: none;

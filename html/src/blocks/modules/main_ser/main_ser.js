@@ -43,6 +43,7 @@ $(function() {
           {
             breakpoint: 811,
             settings: {
+              dots: true,
               slidesToShow: 1
             }
           }

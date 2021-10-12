@@ -964,6 +964,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     }, {
       breakpoint: 811,
       settings: {
+        dots: true,
         slidesToShow: 1
       }
     }]
@@ -1005,6 +1006,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     }, {
       breakpoint: 811,
       settings: {
+        dots: true,
         slidesToShow: 1
       }
     }]
