@@ -5,8 +5,6 @@
     @media all and (max-width: 640px) {
         margin-top: 25px;
         margin-bottom: 44px;
-        padding-left: 0;
-        padding-right: 0;
     }
     .slick-list {
         padding-top: 10px;
@@ -21,8 +19,8 @@
         margin-bottom: 40px;
         @media all and (max-width: 640px) {
             margin-bottom: 28px;
-            padding-left: 28px;
-            padding-right: 28px;
+            padding-left: 15px;
+            padding-right: 15px;
             font-size: 24px;
         }
     }
@@ -35,6 +33,10 @@
         top: 0;
         &:hover {
             top: -10px;
+        }
+        @media all and (max-width: 640px) {
+            max-width: 290px;
+            margin-right: 39px;
         }
     }
     .slick-prev {

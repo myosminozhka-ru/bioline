@@ -10,10 +10,7 @@
         padding-top: 114px;
     }
     &__in {
-        @media all and (max-width: 640px) {
-            padding-left: 0;
-            padding-right: 0;
-        }
+        
     }
     &__title {
         font-family: 'gmm', serif;
@@ -24,8 +21,8 @@
         color: #26364B;
         margin-bottom: 60px;
         @media all and (max-width: 640px) {
-            padding-left: 30px;
-            padding-right: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
             font-size: 24px;
             line-height: 30px;
             margin-bottom: 36px;

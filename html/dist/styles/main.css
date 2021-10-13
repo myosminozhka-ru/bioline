@@ -4086,14 +4086,9 @@ img {
     padding-top: 114px;
   }
 
-  .main_wrk__in {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .main_wrk__title {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 36px;
@@ -4138,15 +4133,18 @@ img {
   .main_ser {
     margin-top: 25px;
     margin-bottom: 44px;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .main_ser__title {
     margin-bottom: 28px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 24px;
+  }
+
+  .main_ser__block {
+    max-width: 290px;
+    margin-right: 39px;
   }
 
   .main_rev {
