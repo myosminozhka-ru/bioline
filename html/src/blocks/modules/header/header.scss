@@ -67,6 +67,7 @@
         & .burger-body {
             position: fixed;
             top: 0;
+            bottom: 0;
             right: -100%;
             -webkit-transition: all .5s;
             -o-transition: all .5s;
@@ -160,6 +161,7 @@
     border-radius: 0 0 112px 122px;
     @media all and (max-width: 830px) {
         border-radius: 0 0 70px 70px;
+        background: #FFF7F3 url('../img/head_bg.png') 0 70% / 100% no-repeat;
     }
     &__in {
         margin-bottom: -105px;
@@ -195,6 +197,11 @@
         &--logo {
             display: block;
             font-size: 0;
+            position: relative;
+            bottom: -8px;
+            @media all and (max-width: 960px) {
+                bottom: 0;
+            }
         }
         &--r {
             width: 100%;

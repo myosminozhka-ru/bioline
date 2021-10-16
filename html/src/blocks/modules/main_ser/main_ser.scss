@@ -3,7 +3,7 @@
     margin-bottom: 85px;
     overflow: hidden;
     @media all and (max-width: 640px) {
-        margin-top: 25px;
+        margin-top: 40px;
         margin-bottom: 44px;
     }
     .slick-list {
@@ -36,7 +36,8 @@
         }
         @media all and (max-width: 640px) {
             max-width: 290px;
-            margin-right: 39px;
+            margin-left: 0px;
+            margin-right: 14px;
         }
     }
     .slick-prev {
@@ -127,9 +128,14 @@
             align-items: center;
             justify-content: center;
             bottom: 45px;
+            left: 0;
+            right: 0;
             pointer-events: none;
             li {
                 pointer-events: all;
+                margin-left: 5px;
+                margin-right: 5px;
+                width: 5px;
                 button {
                     margin-left: 5px;
                     margin-right: 5px;
@@ -137,6 +143,7 @@
                     width: 5px;
                     height: 5px;
                     border-radius: 50%;
+                    padding: 0;
                     &:before {
                         display: none;
                     }
