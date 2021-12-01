@@ -95,6 +95,9 @@
         }
         &.block_phone {
             margin-top: 188px;
+            @media all and (max-width: 960px) {
+                margin-top: 80px;
+            }
         }
     }
     &__phone {
@@ -124,6 +127,14 @@
         height: 406px;
         overflow: auto;
         margin-top: 15px;
+        @media all and (max-width: 960px) {
+            padding-left: 45px;
+            padding-right: 33px;
+        }
+        @media all and (max-width: 480px) {
+            height: 338px;
+            margin-bottom: 80px;
+        }
         &::-webkit-scrollbar
         {
             width: 10px;

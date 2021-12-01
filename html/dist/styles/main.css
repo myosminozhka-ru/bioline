@@ -3851,6 +3851,15 @@ img {
     bottom: 0;
   }
 
+  .main_bl__block.block_phone {
+    margin-top: 80px;
+  }
+
+  .main_bl__chat {
+    padding-left: 45px;
+    padding-right: 33px;
+  }
+
   .main_form__in {
     padding-left: 0;
     padding-right: 0;
@@ -4579,6 +4588,11 @@ img {
   .header__t--l {
     max-width: 86px;
     width: 100%;
+  }
+
+  .main_bl__chat {
+    height: 338px;
+    margin-bottom: 80px;
   }
 
   .main_form__title br {
