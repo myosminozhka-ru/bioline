@@ -252,18 +252,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   }).init();
 });
 
-function getMessages(letter) {
-  var message = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#messages');
-  message.scrollTop(message[0].scrollHeight);
-}
-
-setInterval(function () {
-  getMessages("letter");
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()("#messages").animate({
-    scrollTop: 20000000
-  }, "slow");
-}, 100);
-
 /***/ }),
 
 /***/ "./src/blocks/modules/main_form/main_form.js":
