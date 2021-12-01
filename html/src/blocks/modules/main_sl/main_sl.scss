@@ -1,0 +1,93 @@
+.main_sl {
+    margin-bottom: 20px;
+    &__title {
+        font-family: 'gmm', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 60px;
+        color: #26364B;
+        margin-bottom: 80px;
+    }
+    &__slides {
+        border-radius: 30px;
+        background: #FAFAFA;
+        position: relative;
+    }
+    .slick-dots {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        margin-top: -80px;
+        right: 40px;
+        width: 10px;
+        li {
+            padding: 0;
+            width: auto;
+            margin: 0;
+            height: auto;
+            button {
+                margin: 0;
+                background: #BABABA;
+                border-radius: 5px;
+                width: 5px;
+                height: 5px;
+                padding: 0;
+                transition: all .3s ease-out;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                &:before {
+                    display: none !important;
+                }
+            }
+            &.slick-active {
+                button {
+                    width: 10px;
+                    height: 20px;
+                    background: #FF5000;
+                    border-radius: 45px;                
+                }
+            }
+        }
+    }
+    &__slide {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        &--l {
+            width: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            font-size: 0;
+        }
+        &--r {
+            max-width: 700px;
+            width: 100%;
+            flex: none;
+            padding-left: 60px;
+        }
+        &--title {
+            font-family: 'gmm', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 120%;
+            max-width: 440px;
+            width: 100%;
+            color: #26364B;
+            margin-bottom: 30px;
+        }
+        &--text {
+            font-family: 'gm', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 140%;
+            color: #3D3D3D;
+            max-width: 530px;
+            width: 100%;
+        }
+    }
+}

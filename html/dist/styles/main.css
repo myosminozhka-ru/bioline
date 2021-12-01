@@ -1595,7 +1595,7 @@ img {
 }
 
 .header {
-  background: #FFF7F3 url("../img/head_bg.png") 0 0/100% no-repeat;
+  background: url("../img/head_bg.png") 0 0/100% no-repeat;
   border-radius: 0 0 112px 122px;
 }
 
@@ -1607,11 +1607,11 @@ img {
   display: flex;
   justify-content: space-between;
   padding-bottom: 35px;
-  padding-top: 37px;
+  padding-top: 18px;
 }
 
 .header__t--l {
-  flex: 0 0 235px;
+  flex: 0 0 146px;
   margin-right: 108px;
 }
 
@@ -1630,7 +1630,7 @@ img {
 }
 
 .header__t--tt {
-  margin-bottom: 68px;
+  margin-bottom: 63px;
 }
 
 .header__t--info {
@@ -1689,6 +1689,7 @@ img {
 
 .header__t--tb {
   width: 100%;
+  max-width: 965px;
 }
 
 .header__t--tb ul {
@@ -1702,12 +1703,12 @@ img {
 
 .header__t--tb ul li a {
   margin-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   border-bottom: 5px solid transparent;
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   text-decoration: none;
   transition: all .3s ease-out;
@@ -1716,6 +1717,7 @@ img {
 
 .header__t--tb ul li a:hover {
   border-color: #FF5000;
+  text-shadow: 0px 0px 0px black;
 }
 
 .header__b {
@@ -1725,10 +1727,15 @@ img {
 }
 
 .header__b--l {
-  flex: 0 0 490px;
+  flex: 0 0 537px;
   font-size: 0;
-  background: radial-gradient(51% 50% at 50% 80%, #FFB08C 0%, rgba(255, 196, 169, 0) 100%);
+  background: radial-gradient(51% 50% at 50% 80%, #66C9BA 0%, rgba(226, 255, 251, 0) 100%);
   margin-right: 25px;
+}
+
+.header__b--l img {
+  position: relative;
+  bottom: -1px;
 }
 
 .header__b--r {
@@ -1741,8 +1748,8 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 48px;
   color: #26364B;
   margin-bottom: 40px;
 }
@@ -1751,10 +1758,9 @@ img {
   font-family: 'gml', serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 30px;
-  line-height: 38px;
+  font-size: 20px;
   color: #3D3D3D;
-  max-width: 618px;
+  max-width: 630px;
   width: 100%;
   margin-bottom: 50px;
 }
@@ -1874,7 +1880,7 @@ img {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   color: #26364B;
   margin-bottom: 18px;
 }
@@ -1886,6 +1892,110 @@ img {
   font-size: 18px;
   line-height: 23px;
   color: #26364B;
+}
+
+.main_sl {
+  margin-bottom: 20px;
+}
+
+.main_sl__title {
+  font-family: 'gmm', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  color: #26364B;
+  margin-bottom: 80px;
+}
+
+.main_sl__slides {
+  border-radius: 30px;
+  background: #FAFAFA;
+  position: relative;
+}
+
+.main_sl .slick-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  margin-top: -80px;
+  right: 40px;
+  width: 10px;
+}
+
+.main_sl .slick-dots li {
+  padding: 0;
+  width: auto;
+  margin: 0;
+  height: auto;
+}
+
+.main_sl .slick-dots li button {
+  margin: 0;
+  background: #BABABA;
+  border-radius: 5px;
+  width: 5px;
+  height: 5px;
+  padding: 0;
+  transition: all .3s ease-out;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.main_sl .slick-dots li button:before {
+  display: none !important;
+}
+
+.main_sl .slick-dots li.slick-active button {
+  width: 10px;
+  height: 20px;
+  background: #FF5000;
+  border-radius: 45px;
+}
+
+.main_sl__slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_sl__slide--l {
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.main_sl__slide--r {
+  max-width: 700px;
+  width: 100%;
+  flex: none;
+  padding-left: 60px;
+}
+
+.main_sl__slide--title {
+  font-family: 'gmm', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 120%;
+  max-width: 440px;
+  width: 100%;
+  color: #26364B;
+  margin-bottom: 30px;
+}
+
+.main_sl__slide--text {
+  font-family: 'gm', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 140%;
+  color: #3D3D3D;
+  max-width: 530px;
+  width: 100%;
 }
 
 .main_bl {
@@ -3121,6 +3231,12 @@ img {
 @media screen and (min-width: 75rem) {
   .container {
     max-width: 69.375rem;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .header__b--l img {
+    bottom: -70px;
   }
 }
 

@@ -157,7 +157,7 @@
 }
 // burg end
 .header {
-    background: #FFF7F3 url('../img/head_bg.png') 0 0 / 100% no-repeat;
+    background: url('../img/head_bg.png') 0 0 / 100% no-repeat;
     border-radius: 0 0 112px 122px;
     @media all and (max-width: 830px) {
         border-radius: 0 0 70px 70px;
@@ -173,13 +173,13 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 35px;
-        padding-top: 37px;
+        padding-top: 18px;
         @media all and (max-width: 830px) {
             align-items: flex-end;
             padding-top: 11px;
         }
         &--l {
-            flex: 0 0 235px;
+            flex: 0 0 146px;
             margin-right: 108px;
             @media all and (max-width: 1160px) {
                 margin-right: 20px;
@@ -210,7 +210,7 @@
             align-items: flex-end;
         }
         &--tt {
-            margin-bottom: 68px;
+            margin-bottom: 63px;
             @media all and (max-width: 830px) {
                 margin-bottom: 0px;
             }
@@ -284,6 +284,7 @@
         }
         &--tb {
             width: 100%;
+            max-width: 965px;
             ul {
                 margin: 0;
                 padding: 0;
@@ -297,18 +298,19 @@
                 li {
                     a {
                         margin-top: 10px;
-                        padding-bottom: 10px;
+                        padding-bottom: 5px;
                         border-bottom: 5px solid transparent;
                         font-family: 'gm', serif;
                         font-style: normal;
                         font-weight: normal;
-                        font-size: 24px;
+                        font-size: 20px;
                         line-height: 30px;
                         text-decoration: none;
                         transition: all .3s ease-out;
                         color: #26364B;
                         &:hover {
-                            border-color: #FF5000;
+                            border-color: #FF5000;  
+                            text-shadow: 0px 0px 0px black;
                         }
                     }
                 }
@@ -325,10 +327,17 @@
             position: relative;
         }
         &--l {
-            flex: 0 0 490px;
+            flex: 0 0 537px;
             font-size: 0;
-            background: radial-gradient(51% 50% at 50% 80%, #FFB08C 0%, rgba(255, 196, 169, 0) 100%);
+            background: radial-gradient(51% 50% at 50% 80%, #66C9BA 0%, rgba(226, 255, 251, 0) 100%);
             margin-right: 25px;
+            img {
+                position: relative;
+                @media all and (min-width: 1024px) {
+                    bottom: -70px;
+                }
+                bottom: -1px;
+            }
             @media all and (max-width: 1023px) {
                 background: none;
                 margin-right: 0;
@@ -355,8 +364,8 @@
             font-family: 'gmm', serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 48px;
-            line-height: 60px;            
+            font-size: 40px;
+            line-height: 48px;            
             color: #26364B;  
             margin-bottom: 40px;     
             @media all and (max-width: 1200px) {
@@ -379,10 +388,9 @@
             font-family: 'gml', serif;
             font-style: normal;
             font-weight: 300;
-            font-size: 30px;
-            line-height: 38px;
+            font-size: 20px;
             color: #3D3D3D;
-            max-width: 618px;
+            max-width: 630px;
             width: 100%;
             margin-bottom: 50px;
             @media all and (max-width: 1200px) {
