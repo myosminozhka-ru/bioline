@@ -26,11 +26,11 @@ $(function() {
         delay:100,
         duration:1000
     })
-    .add(".main_bl__chat--bl",{
-        animation:"fadeInDown",
-        delay:1000,
-        duration:500
-    })
+    // .add(".main_bl__chat--bl",{
+    //     animation:"fadeInDown",
+    //     delay:1000,
+    //     duration:500
+    // })
     .init();
     // window.onload = function(){
     //     var scrollinDiv = document.getElementById('messages');

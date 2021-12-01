@@ -129,12 +129,15 @@
             margin-left: auto;
             margin-right: auto;
         }
+        @media all and (max-width: 480px) {
+            margin-bottom: 40px;
+        }
     }
     &__chat {
         padding: 0px 65px;
-        padding-right: 54px;
+        padding-left: 66px;
         height: 406px;
-        margin-top: 15px;
+        margin-bottom: 15px;
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -144,14 +147,14 @@
         -ms-flex-pack: end;
         justify-content: flex-end;
         @media all and (max-width: 960px) {
-            padding-left: 45px;
-            padding-right: 33px;
+            padding-right: 45px;
+            padding-left: 33px;
         }
         @media all and (max-width: 640px) {
-            margin-bottom: 80px !important;
+            margin-top: 20px !important;
         }
         @media all and (max-width: 480px) {
-            height: 337px;
+            height: 320px;
         }
         &--item {
             overflow-y: scroll;
@@ -229,5 +232,74 @@
 }
 
 .main_bl__chat--bl {
-    transition: all .3s ease-out;
+    transition: all 1s ease-out;
 }
+.atransomas {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.bl1 {
+    animation-delay: 1s;
+}
+.bl2 {
+    animation-delay: 3s;
+}
+.bl3 {
+    animation-delay: 5s;
+}
+.bl4 {
+    animation-delay: 7s;
+}
+.bl5 {
+    animation-delay: 9s;
+}
+.bl6 {
+    animation-delay: 11s;
+}
+.bl7 {
+    animation-delay: 13s;
+}
+.bl8 {
+    animation-delay: 15s;
+}
+.bl9 {
+    animation-delay: 17s;
+}
+@-webkit-keyframes dvizheniyaUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        height: 0;
+    }
+  
+    to {
+        opacity: 1;
+        height: max-content !important;
+        -webkit-transform: none;
+        transform: none;
+    }
+  }
+  @keyframes dvizheniyaUp {
+    from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    height: 0;
+    }
+  
+    to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    height: max-content !important;
+    }
+  }
+  
+  .dvizheniyaUp {
+    -webkit-animation-name: dvizheniyaUp;
+    animation-name: dvizheniyaUp;
+  }
+  

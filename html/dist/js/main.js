@@ -245,11 +245,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     animation: "fadeInUp",
     delay: 100,
     duration: 1000
-  }).add(".main_bl__chat--bl", {
-    animation: "fadeInDown",
-    delay: 1000,
-    duration: 500
-  }).init(); // window.onload = function(){
+  }) // .add(".main_bl__chat--bl",{
+  //     animation:"fadeInDown",
+  //     delay:1000,
+  //     duration:500
+  // })
+  .init(); // window.onload = function(){
   //     var scrollinDiv = document.getElementById('messages');
   //     setInterval(function() {          
   //          scrollinDiv.scrollTop = 9999;
@@ -1199,7 +1200,7 @@ Skroll = function Skroll(t) {
     },
     fadeInDown: {
       start: function start(t) {
-        t.style.transform = "translate(0,50%)", t.style.opacity = 0, t.style.height = 0;
+        t.style.transform = "translate(0,-50%)", t.style.opacity = 0, t.style.height = 0;
       },
       end: function end(t) {
         t.style.transform = "translate(0,0%)", t.style.opacity = 1, t.style.height = 'max-content';
