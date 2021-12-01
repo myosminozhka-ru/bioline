@@ -3,7 +3,7 @@ $(function() {
     var skroll = new Skroll()
     .add(".main_blocks__block",{
         animation:"fadeInUp",
-        delay:500,
+        delay:250,
         duration:1000
     })
     .add(".main_sl__title",{

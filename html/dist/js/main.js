@@ -227,7 +227,7 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var skroll = new Skroll().add(".main_blocks__block", {
     animation: "fadeInUp",
-    delay: 500,
+    delay: 250,
     duration: 1000
   }).add(".main_sl__title", {
     animation: "fadeInUp",
@@ -1029,6 +1029,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     arrows: false,
     slidesToShow: 1,
     swipe: false,
+    autoplay: true,
     vertical: true,
     slidesToScroll: 1,
     responsive: [{

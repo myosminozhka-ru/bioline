@@ -8,6 +8,7 @@ $(function() {
         arrows: false,
         slidesToShow: 1,
         swipe: false,
+        autoplay: true,
         vertical: true,
         slidesToScroll: 1,
         responsive: [
