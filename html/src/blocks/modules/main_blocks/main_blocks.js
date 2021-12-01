@@ -32,4 +32,13 @@ $(function() {
         duration:500
     })
     .init();
+    
 });
+function getMessages(letter) {
+    var message=$('#messages');
+        message.scrollTop(message[0].scrollHeight);
+}
+
+setInterval(function() {
+    getMessages("letter");$("#messages").animate({ scrollTop: 20000000 }, "slow");
+}, 100)

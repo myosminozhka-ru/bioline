@@ -7,7 +7,6 @@ $(function() {
         speed: 300,
         arrows: false,
         slidesToShow: 1,
-        swipe: false,
         autoplay: true,
         vertical: true,
         slidesToScroll: 1,
@@ -15,8 +14,7 @@ $(function() {
           {
             breakpoint: 1024,
             settings: {
-                vertical: false,
-                swipe: true
+                vertical: false
             }
           }
         ]

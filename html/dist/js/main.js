@@ -252,6 +252,18 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   }).init();
 });
 
+function getMessages(letter) {
+  var message = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#messages');
+  message.scrollTop(message[0].scrollHeight);
+}
+
+setInterval(function () {
+  getMessages("letter");
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()("#messages").animate({
+    scrollTop: 20000000
+  }, "slow");
+}, 100);
+
 /***/ }),
 
 /***/ "./src/blocks/modules/main_form/main_form.js":
@@ -1028,15 +1040,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     speed: 300,
     arrows: false,
     slidesToShow: 1,
-    swipe: false,
     autoplay: true,
     vertical: true,
     slidesToScroll: 1,
     responsive: [{
       breakpoint: 1024,
       settings: {
-        vertical: false,
-        swipe: true
+        vertical: false
       }
     }]
   });
@@ -1196,7 +1206,7 @@ Skroll = function Skroll(t) {
     },
     fadeInDown: {
       start: function start(t) {
-        t.style.transform = "translate(0,-50%)", t.style.opacity = 0, t.style.height = 0;
+        t.style.transform = "translate(0,50%)", t.style.opacity = 0, t.style.height = 0;
       },
       end: function end(t) {
         t.style.transform = "translate(0,0%)", t.style.opacity = 1, t.style.height = 'max-content';
