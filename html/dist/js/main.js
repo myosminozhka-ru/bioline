@@ -997,6 +997,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     speed: 300,
     arrows: false,
     slidesToShow: 1,
+    swipe: false,
     vertical: true,
     slidesToScroll: 1,
     responsive: [{
