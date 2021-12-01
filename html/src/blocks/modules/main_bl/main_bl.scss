@@ -2,6 +2,7 @@
     padding-top: 130px;
     padding-bottom: 150px;
     background: url('../img/bg_b.png') 100% calc(100% - 50px) no-repeat;
+    
     @media all and (max-width: 1023px) {
         background: none;
     }
@@ -122,7 +123,21 @@
         padding-right: 54px;
         height: 422px;
         overflow: auto;
-        padding-top: 15px;
+        margin-top: 15px;
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: #f9f9fd;
+            display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #18aaaa;
+        }
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            background-color: #f9f9fd;
+        }
         &--text {
             padding: 11px 16px;
             padding-left: 24px;
@@ -136,6 +151,12 @@
             color: #000000;
             margin-bottom: 7px;
             text-align: left;
+        }
+        &--bl {
+            width: 100%;
+            max-width: 234px;
+            margin-left: auto;
+            margin-right: auto;
         }
         &--img {
             margin-bottom: 7px;
@@ -159,5 +180,6 @@
     }
 }
 
-
-// chat phone
+.main_bl__chat--bl {
+    transition: all .3s ease-out;
+}

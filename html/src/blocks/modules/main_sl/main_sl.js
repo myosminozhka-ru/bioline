@@ -14,7 +14,8 @@ $(function() {
           {
             breakpoint: 1024,
             settings: {
-                vertical: false
+                vertical: false,
+                swipe: true
             }
           }
         ]

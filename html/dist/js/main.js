@@ -216,10 +216,45 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 /*!*******************************************************!*\
   !*** ./src/blocks/modules/main_blocks/main_blocks.js ***!
   \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  var skroll = new Skroll().add(".main_blocks__block", {
+    animation: "fadeInUp",
+    delay: 500,
+    duration: 1000
+  }).add(".main_bl__block", {
+    animation: "fadeInUp",
+    delay: 100,
+    duration: 1000
+  }).add(".main_sl__title", {
+    animation: "fadeInUp",
+    delay: 100,
+    duration: 1000
+  }).add(".main_sl__slides", {
+    animation: "fadeInUp",
+    delay: 100,
+    duration: 1000
+  }).add(".main_form__title", {
+    animation: "fadeInUp",
+    delay: 100,
+    duration: 1000
+  }).add(".main_form__fr", {
+    animation: "fadeInUp",
+    delay: 100,
+    duration: 1000
+  }).add(".main_bl__chat--bl", {
+    animation: "fadeInDown",
+    delay: 1000,
+    duration: 500
+  }).init();
+});
 
 /***/ }),
 
@@ -1003,7 +1038,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     responsive: [{
       breakpoint: 1024,
       settings: {
-        vertical: false
+        vertical: false,
+        swipe: true
       }
     }]
   });
@@ -1063,6 +1099,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 /***/ }),
 
+/***/ "./src/js/import/jquery.scrollbar.min.js":
+/*!***********************************************!*\
+  !*** ./src/js/import/jquery.scrollbar.min.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\goncharov-5769\\Desktop\\bioline\\html\\src\\js\\import\\jquery.scrollbar.min.js'");
+
+/***/ }),
+
 /***/ "./src/js/import/modules.js":
 /*!**********************************!*\
   !*** ./src/js/import/modules.js ***!
@@ -1074,7 +1121,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
 /* harmony import */ var _modules_main_blocks_main_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/main_blocks/main_blocks */ "./src/blocks/modules/main_blocks/main_blocks.js");
-/* harmony import */ var _modules_main_blocks_main_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_main_blocks_main_blocks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_main_sl_main_sl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/main_sl/main_sl */ "./src/blocks/modules/main_sl/main_sl.js");
 /* harmony import */ var _modules_main_bl_main_bl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/main_bl/main_bl */ "./src/blocks/modules/main_bl/main_bl.js");
 /* harmony import */ var _modules_main_bl_main_bl__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_main_bl_main_bl__WEBPACK_IMPORTED_MODULE_3__);
@@ -1102,6 +1148,257 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/import/skroll.min.js":
+/*!*************************************!*\
+  !*** ./src/js/import/skroll.min.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/* Skroll v2.0.1, akzhy.com/shelf/skroll | github.com/akzhy/skroll */
+Skroll = function Skroll(t) {
+  this.settings = t || {}, this.settings.mobile = void 0 !== this.settings.mobile && this.settings.mobile, this.referenceElement = void 0 === this.settings.reference ? window : this.get(this.settings.reference)[0], this.elements = [], this.data = {}, this.animations = {
+    zoomIn: {
+      start: function start(t) {
+        t.style.transform = "scale(.1,.1)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "scale(1,1)", t.style.opacity = 1;
+      }
+    },
+    fadeInLeft: {
+      start: function start(t) {
+        t.style.transform = "translate(-50%,0)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0)", t.style.opacity = 1;
+      }
+    },
+    fadeInRight: {
+      start: function start(t) {
+        t.style.transform = "translate(50%,0)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0)", t.style.opacity = 1;
+      }
+    },
+    fadeInLeftBig: {
+      start: function start(t) {
+        t.style.transform = "translate(-100%,0)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0)", t.style.opacity = 1;
+      }
+    },
+    fadeInRightBig: {
+      start: function start(t) {
+        t.style.transform = "translate(100%,0)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0)", t.style.opacity = 1;
+      }
+    },
+    fadeInUp: {
+      start: function start(t) {
+        t.style.transform = "translate(0,50%)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0,0%)", t.style.opacity = 1;
+      }
+    },
+    fadeInDown: {
+      start: function start(t) {
+        t.style.transform = "translate(0,-50%)", t.style.opacity = 0, t.style.height = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0,0%)", t.style.opacity = 1, t.style.height = 'max-content';
+      }
+    },
+    slideInLeft: {
+      start: function start(t) {
+        t.style.transform = "translate(-50%,0) scale(.8,.8)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0) scale(1,1)", t.style.opacity = 1;
+      }
+    },
+    slideInLeftBig: {
+      start: function start(t) {
+        t.style.transform = "translate(-100%,0) scale(.8,.8)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0) scale(1,1)", t.style.opacity = 1;
+      }
+    },
+    slideInRight: {
+      start: function start(t) {
+        t.style.transform = "translate(50%,0) scale(.8,.8)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0) scale(1,1)", t.style.opacity = 1;
+      }
+    },
+    slideInRightBig: {
+      start: function start(t) {
+        t.style.transform = "translate(-100%,0) scale(.8,.8)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0) scale(1,1)", t.style.opacity = 1;
+      }
+    },
+    flipInX: {
+      start: function start(t) {
+        t.style.transform = "rotateX(90deg)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "rotateX(0deg)", t.style.opacity = 1;
+      }
+    },
+    flipInY: {
+      start: function start(t) {
+        t.style.transform = "rotateY(90deg)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "rotateY(0deg)", t.style.opacity = 1;
+      }
+    },
+    rotateRightIn: {
+      start: function start(t) {
+        t.style.transform = "rotate(45deg)", t.style["transform-origin"] = "0 100%", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "rotate(0deg)", t.style.opacity = 1;
+      }
+    },
+    rotateLeftIn: {
+      start: function start(t) {
+        t.style.transform = "rotate(-45deg)", t.style["transform-origin"] = "0 100%", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "rotate(0deg)", t.style.opacity = 1;
+      }
+    },
+    growInLeft: {
+      start: function start(t) {
+        t.style.transform = "translate(-100%,0) scale(.1,.1)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0) scale(1,1)", t.style.opacity = 1;
+      }
+    },
+    growInRight: {
+      start: function start(t) {
+        t.style.transform = "translate(100%,0) scale(.1,.1)", t.style.opacity = 0;
+      },
+      end: function end(t) {
+        t.style.transform = "translate(0%,0) scale(1,1)", t.style.opacity = 1;
+      }
+    }
+  };
+}, Skroll.prototype.get = function (t) {
+  return document.querySelectorAll(t);
+}, Skroll.prototype.inViewport = function (t, e) {
+  var n, a, s, i, o;
+  if (this.referenceElement == window) n = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0), s = (a = this.data[t.getAttribute("data-skroll-id")].top) + t.offsetHeight, i = n + screen.availHeight * e.triggerTop, o = n + screen.availHeight * e.triggerBottom;else {
+    var r = this.referenceElement;
+    n = r.scrollTop, s = (a = this.data[t.getAttribute("data-skroll-id")].top) + t.offsetHeight, i = n + r.offsetHeight * e.triggerTop, o = n + r.offsetHeight * e.triggerBottom;
+  }
+  return s > i && a < o;
+}, Skroll.prototype.getScrollStatus = function (t, e) {
+  return this.inViewport(t, e) ? (this.data[t.getAttribute("data-skroll-id")].inView = !0, {
+    action: "enter",
+    data: {
+      shown: this.data[t.getAttribute("data-skroll-id")].shown
+    }
+  }) : this.data[t.getAttribute("data-skroll-id")].inView ? (this.data[t.getAttribute("data-skroll-id")].inView = !1, {
+    action: "leave",
+    data: {
+      shown: this.data[t.getAttribute("data-skroll-id")].shown
+    }
+  }) : {
+    action: "idle",
+    data: {
+      shown: this.data[t.getAttribute("data-skroll-id")].shown
+    }
+  };
+}, Skroll.prototype.add = function (t) {
+  var e = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var n = {
+    triggerTop: e.triggerTop || .2,
+    triggerBottom: e.triggerBottom || .8,
+    delay: e.delay || 0,
+    duration: e.duration || 500,
+    animation: e.animation || "zoomIn",
+    easing: e.easing || "ease",
+    wait: e.delay || 0,
+    repeat: e.repeat || !1,
+    onEnter: e.onEnter || !1,
+    onLeave: e.onLeave || !1
+  };
+  return this.elements.push({
+    element: t,
+    settings: n
+  }), this;
+}, Skroll.prototype.recalcPosition = function () {
+  var t = this;
+  this.elements.forEach(function (e, n) {
+    t.get(e.element).forEach(function (e, n) {
+      var a = e.style.transform;
+      e.style.transform = "none", setTimeout(function () {
+        var n = e.getBoundingClientRect(),
+            s = t.referenceElement == window ? n.top + t.referenceElement.scrollY : n.top + t.referenceElement.scrollTop;
+        t.data[e.getAttribute("data-skroll-id")].top = s, e.style.transform = a;
+      }, 50);
+    });
+  });
+}, Skroll.prototype.throttle = function (t, e, n) {
+  var a, s;
+  return e || (e = 250), function () {
+    var i = n || this,
+        o = +new Date(),
+        r = arguments;
+    a && o < a + e ? (clearTimeout(s), s = setTimeout(function () {
+      a = o, t.apply(i, r);
+    }, e)) : (a = o, t.apply(i, r));
+  };
+}, Skroll.prototype.addAnimation = function (t, e) {
+  return this.animations[t] = e, this;
+}, Skroll.prototype.init = function () {
+  var t = this;
+  if (!this.settings.mobile && screen.width < 600) return this;
+  var e = 0;
+  return this.elements.forEach(function (n, a) {
+    t.get(n.element).forEach(function (a, s) {
+      a.setAttribute("data-skroll-id", e);
+      var i = a.getBoundingClientRect(),
+          o = t.referenceElement == window ? i.top + t.referenceElement.scrollY : i.top + t.referenceElement.scrollTop;
+      t.data[a.getAttribute("data-skroll-id")] = {}, t.data[a.getAttribute("data-skroll-id")].inView = !1, t.data[a.getAttribute("data-skroll-id")].shown = !1, t.data[a.getAttribute("data-skroll-id")].top = o, t.data[a.getAttribute("data-skroll-id")].oef = !1, t.data[a.getAttribute("data-skroll-id")].olf = !1, "string" == typeof n.settings.animation && "none" != n.settings.animation ? (t.animations[n.settings.animation] || (console.warn("The requested animation '%s' was not found switching to default zoomIn", n.settings.animation), console.trace(), n.settings.animation = "zoomIn"), t.animations[n.settings.animation].start(a)) : "object" == _typeof(n.settings.animation) && null != n.settings.animation.start && n.settings.animation.start(a), e++;
+    });
+  }), ["scroll", "resize"].forEach(function (e) {
+    t.referenceElement.addEventListener(e, t.throttle(function () {
+      t.elements.forEach(function (e, n) {
+        var a = e.settings.wait;
+        t.get(e.element).forEach(function (n, s) {
+          var i = t.getScrollStatus(n, e.settings);
+          "idle" != i.action && ("enter" != i.action || i.data.shown ? "leave" == i.action && i.data.shown && e.settings.repeat && ("string" == typeof e.settings.animation && "none" != e.settings.animation ? t.animations[e.settings.animation] && (n.style.transition = "all " + e.settings.duration + "ms " + e.settings.easing, setTimeout(function () {
+            t.animations[e.settings.animation].end(n), t.data[n.getAttribute("data-skroll-id")].shown = !1, a += e.settings.delay * s;
+          }, a)) : "object" == _typeof(e.settings.animation) && null != e.settings.animation.end && (n.style.transition = "all " + e.settings.duration + "ms " + e.settings.easing, setTimeout(function () {
+            e.settings.animation.end(n), t.data[n.getAttribute("data-skroll-id")].shown = !1, a += e.settings.delay * s;
+          }, a)), a += e.settings.delay) : ("string" == typeof e.settings.animation && "none" != e.settings.animation ? (n.style.transition = "all " + e.settings.duration + "ms " + e.settings.easing, setTimeout(function () {
+            t.animations[e.settings.animation].end(n), t.data[n.getAttribute("data-skroll-id")].shown = !0, a += e.settings.delay * s;
+          }, a)) : "object" == _typeof(e.settings.animation) && null != e.settings.animation.end && (n.style.transition = "all " + e.settings.duration + "ms " + e.settings.easing, setTimeout(function () {
+            e.settings.animation.end(n), t.data[n.getAttribute("data-skroll-id")].shown = !0, a += e.settings.delay * s;
+          }, a)), a += e.settings.delay), "enter" == i.action ? t.data[n.getAttribute("data-skroll-id")].oef || e.settings.onEnter && (e.settings.onEnter(s, n), t.data[n.getAttribute("data-skroll-id")].oef = !0) : "leave" == i.action && (t.data[n.getAttribute("data-skroll-id")].olf || e.settings.onLeave && (e.settings.onLeave(s, n), t.data[n.getAttribute("data-skroll-id")].olf = !0)));
+        });
+      }), "resize" == e && t.recalcPosition();
+    }, 150));
+  }), window.dispatchEvent ? t.referenceElement.dispatchEvent(new Event("scroll")) : t.referenceElement.fireEvent("scroll"), t;
+};
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -1112,6 +1409,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
+/* harmony import */ var _import_skroll_min__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/skroll.min */ "./src/js/import/skroll.min.js");
+/* harmony import */ var _import_skroll_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_import_skroll_min__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _import_jquery_scrollbar_min__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/jquery.scrollbar.min */ "./src/js/import/jquery.scrollbar.min.js");
+/* harmony import */ var _import_jquery_scrollbar_min__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_import_jquery_scrollbar_min__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 /***/ })
