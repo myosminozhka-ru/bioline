@@ -229,10 +229,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     animation: "fadeInUp",
     delay: 500,
     duration: 1000
-  }).add(".main_bl__block", {
-    animation: "fadeInUp",
-    delay: 100,
-    duration: 1000
   }).add(".main_sl__title", {
     animation: "fadeInUp",
     delay: 100,
@@ -1099,17 +1095,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 /***/ }),
 
-/***/ "./src/js/import/jquery.scrollbar.min.js":
-/*!***********************************************!*\
-  !*** ./src/js/import/jquery.scrollbar.min.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\goncharov-5769\\Desktop\\bioline\\html\\src\\js\\import\\jquery.scrollbar.min.js'");
-
-/***/ }),
-
 /***/ "./src/js/import/modules.js":
 /*!**********************************!*\
   !*** ./src/js/import/modules.js ***!
@@ -1411,9 +1396,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
 /* harmony import */ var _import_skroll_min__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/skroll.min */ "./src/js/import/skroll.min.js");
 /* harmony import */ var _import_skroll_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_import_skroll_min__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _import_jquery_scrollbar_min__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/jquery.scrollbar.min */ "./src/js/import/jquery.scrollbar.min.js");
-/* harmony import */ var _import_jquery_scrollbar_min__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_import_jquery_scrollbar_min__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 

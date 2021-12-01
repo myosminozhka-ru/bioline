@@ -6,11 +6,6 @@ $(function() {
         delay:500,
         duration:1000
     })
-    .add(".main_bl__block",{
-        animation:"fadeInUp",
-        delay:100,
-        duration:1000
-    })
     .add(".main_sl__title",{
         animation:"fadeInUp",
         delay:100,
