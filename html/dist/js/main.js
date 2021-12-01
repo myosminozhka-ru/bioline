@@ -250,12 +250,33 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   //     delay:1000,
   //     duration:500
   // })
-  .init(); // window.onload = function(){
-  //     var scrollinDiv = document.getElementById('messages');
-  //     setInterval(function() {          
-  //          scrollinDiv.scrollTop = 9999;
-  //     }, 100);
-  //  }
+  .init();
+  var block_show = false;
+
+  function scrollTracking() {
+    if (block_show) {
+      return false;
+    }
+
+    var wt = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
+    var wh = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height();
+    var et = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_phone').offset().top;
+    var eh = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_phone').outerHeight();
+    var dh = jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).height();
+
+    if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+      block_show = true; // Код анимации
+
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_phone').addClass('abc');
+    }
+  }
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
+    scrollTracking();
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+    scrollTracking();
+  });
 });
 
 /***/ }),

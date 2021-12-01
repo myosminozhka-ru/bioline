@@ -2168,7 +2168,7 @@ img {
   transition: all 1s ease-out;
 }
 
-.atransomas {
+.abc .atransomas {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -2243,7 +2243,7 @@ img {
   }
 }
 
-.dvizheniyaUp {
+.abc .dvizheniyaUp {
   -webkit-animation-name: dvizheniyaUp;
   animation-name: dvizheniyaUp;
 }
@@ -4712,6 +4712,11 @@ img {
 
   .main_bl__chat {
     height: 320px;
+  }
+
+  .main_bl__chat--text {
+    max-width: 202px;
+    width: 100%;
   }
 
   .main_form__title br {

@@ -202,6 +202,10 @@
             color: #000000;
             margin-bottom: 7px;
             text-align: left;
+            @media all and (max-width: 480px) {
+                max-width: 202px;
+                width: 100%;
+            }
         }
         &--bl {
             width: 100%;
@@ -234,7 +238,7 @@
 .main_bl__chat--bl {
     transition: all 1s ease-out;
 }
-.atransomas {
+.abc .atransomas {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -298,7 +302,7 @@
     }
   }
   
-  .dvizheniyaUp {
+ .abc .dvizheniyaUp {
     -webkit-animation-name: dvizheniyaUp;
     animation-name: dvizheniyaUp;
   }

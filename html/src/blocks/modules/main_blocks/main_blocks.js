@@ -32,10 +32,37 @@ $(function() {
     //     duration:500
     // })
     .init();
-    // window.onload = function(){
-    //     var scrollinDiv = document.getElementById('messages');
-    //     setInterval(function() {          
-    //          scrollinDiv.scrollTop = 9999;
-    //     }, 100);
-    //  }
+    
+
+
+
+
+    var block_show = false;
+
+    function scrollTracking(){
+        if (block_show) {
+            return false;
+        }
+
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+        var et = $('.block_phone').offset().top;
+        var eh = $('.block_phone').outerHeight();
+        var dh = $(document).height();   
+    
+        if (wt + wh >= et || wh + wt == dh || eh + et < wh){
+            block_show = true;
+            
+            // Код анимации
+            $('.block_phone').addClass('abc');
+        }
+    }
+
+    $(window).scroll(function(){
+        scrollTracking();
+    });
+        
+    $(document).ready(function(){ 
+        scrollTracking();
+    });
 });
