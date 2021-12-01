@@ -249,7 +249,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     animation: "fadeInDown",
     delay: 1000,
     duration: 500
-  }).init();
+  }).init(); // window.onload = function(){
+  //     var scrollinDiv = document.getElementById('messages');
+  //     setInterval(function() {          
+  //          scrollinDiv.scrollTop = 9999;
+  //     }, 100);
+  //  }
 });
 
 /***/ }),

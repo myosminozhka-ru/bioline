@@ -32,5 +32,10 @@ $(function() {
         duration:500
     })
     .init();
-    
+    // window.onload = function(){
+    //     var scrollinDiv = document.getElementById('messages');
+    //     setInterval(function() {          
+    //          scrollinDiv.scrollTop = 9999;
+    //     }, 100);
+    //  }
 });

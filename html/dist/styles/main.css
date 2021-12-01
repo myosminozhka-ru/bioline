@@ -2082,17 +2082,31 @@ img {
   padding: 0px 65px;
   padding-right: 54px;
   height: 406px;
-  overflow: auto;
   margin-top: 15px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
-.main_bl__chat::-webkit-scrollbar {
+.main_bl__chat--item {
+  overflow-y: scroll;
+  transform: rotate(180deg);
+  direction: rtl;
+  overflow: auto;
+}
+
+.main_bl__chat--item::-webkit-scrollbar {
   width: 10px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.main_bl__chat::-webkit-scrollbar-track {
+.main_bl__chat--item::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #fff;
@@ -2100,10 +2114,15 @@ img {
   border-right: 10px solid white;
 }
 
-.main_bl__chat::-webkit-scrollbar-thumb {
+.main_bl__chat--item::-webkit-scrollbar-thumb {
   border-radius: 20px;
   -webkit-box-shadow: inset 0 0 px #FF5000;
   background-color: #FF5000;
+}
+
+.main_bl__chat .msg {
+  transform: rotate(180deg);
+  direction: ltr;
 }
 
 .main_bl__chat--text {
