@@ -8,6 +8,14 @@ $(function() {
         arrows: false,
         slidesToShow: 1,
         vertical: true,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+                vertical: false
+            }
+          }
+        ]
     });
 });

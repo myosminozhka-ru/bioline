@@ -1,9 +1,10 @@
 .main_bl {
-    background: #FFF7F3;
-    border-radius: 200px 0 200px 0;
     padding-top: 130px;
-    padding-bottom: 293px;
-    margin-bottom: -355px;
+    padding-bottom: 150px;
+    background: url('../img/bg_b.png') 100% calc(100% - 50px) no-repeat;
+    @media all and (max-width: 1023px) {
+        background: none;
+    }
     @media all and (max-width: 980px) {
         border-radius: 70px 0 70px 0;
     }
@@ -32,8 +33,8 @@
             font-family: 'gmm', serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 48px;
-            line-height: 60px;
+            font-size: 40px;
+            line-height: 120%;
             color: #26364B;
             @media all and (max-width: 980px) {
                 br {
@@ -52,10 +53,10 @@
             font-family: 'gml', serif;
             font-style: normal;
             font-weight: 300;
-            font-size: 24px;
-            line-height: 30px;
+            font-size: 20px;
+            line-height: 140%;
             color: #3D3D3D;
-            max-width: 422px;
+            max-width: 530px;
             width: 100%;
             @media all and (max-width: 980px) {
                 max-width: 100%;
@@ -93,3 +94,6 @@
         }
     }
 }
+
+
+// chat phone
