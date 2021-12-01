@@ -111,6 +111,12 @@
         position: relative;
         padding-top: 90px;
         padding-bottom: 15px;
+        @media all and (max-width: 480px) {
+            max-width: 290px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .phone-image {
             position: absolute;
             top: 0;
@@ -138,7 +144,7 @@
             margin-bottom: 80px !important;
         }
         @media all and (max-width: 480px) {
-            height: 338px;
+            height: 337px;
         }
         &::-webkit-scrollbar
         {

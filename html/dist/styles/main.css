@@ -2567,10 +2567,6 @@ img {
   top: 0;
 }
 
-.main_ser__block:hover {
-  top: -10px;
-}
-
 .main_ser .slick-prev {
   border: 1px solid #66C9BA;
   width: 38px;
@@ -3331,6 +3327,12 @@ img {
 @media screen and (min-width: 75rem) {
   .container {
     max-width: 69.375rem;
+  }
+}
+
+@media all and (min-width: 910px) {
+  .main_ser__block:hover {
+    top: -10px;
   }
 }
 
@@ -4598,8 +4600,15 @@ img {
     width: 100%;
   }
 
+  .main_bl__phone {
+    max-width: 290px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .main_bl__chat {
-    height: 338px;
+    height: 337px;
   }
 
   .main_form__title br {

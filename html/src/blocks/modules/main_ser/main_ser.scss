@@ -31,8 +31,10 @@
         position: relative;
         transition: all .3s ease-out;
         top: 0;
-        &:hover {
-            top: -10px;
+        @media all and (min-width: 910px) {
+            &:hover {
+                top: -10px;
+            }
         }
         @media all and (max-width: 640px) {
             max-width: 290px;
