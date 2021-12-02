@@ -2278,6 +2278,7 @@ img {
   margin-bottom: -117px;
   position: relative;
   z-index: 10;
+  overflow: hidden;
 }
 
 .main_form__title {
@@ -2299,6 +2300,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 100px;
   padding: 103px 10px 83px 10px;
+  overflow: hidden;
 }
 
 .main_form__scroll {
@@ -2338,8 +2340,8 @@ img {
   border-radius: 20px;
   margin-top: 40px;
   margin-bottom: 35px;
-  transition: all 2.5s ease-out;
-  opacity: 0;
+  transition: all 1s ease-out;
+  transform: scale(0);
   visibility: hidden;
   position: absolute;
   bottom: 99999px;
@@ -2356,7 +2358,7 @@ img {
 
 .main_form__ques.active {
   position: relative;
-  opacity: 1;
+  transform: scale(1);
   bottom: unset;
   visibility: visible;
 }
