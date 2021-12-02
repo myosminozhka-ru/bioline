@@ -249,7 +249,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   //     animation:"fadeInDown",
   //     delay:1000,
   //     duration:500
-  // })
+  // })1
   .init();
   var block_show = false;
 
