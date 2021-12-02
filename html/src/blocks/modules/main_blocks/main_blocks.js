@@ -16,11 +16,11 @@ $(function() {
         delay:100,
         duration:1000
     })
-    .add(".main_form__title",{
-        animation:"fadeInUp",
-        delay:100,
-        duration:1000
-    })
+    // .add(".main_form__title",{
+    //     animation:"fadeInUp",
+    //     delay:100,
+    //     duration:1000
+    // })
     // .add(".main_bl__chat--bl",{
     //     animation:"fadeInDown",
     //     delay:1000,

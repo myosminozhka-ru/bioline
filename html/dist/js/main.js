@@ -241,11 +241,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     animation: "fadeInUp",
     delay: 100,
     duration: 1000
-  }).add(".main_form__title", {
-    animation: "fadeInUp",
-    delay: 100,
-    duration: 1000
-  }) // .add(".main_bl__chat--bl",{
+  }) // .add(".main_form__title",{
+  //     animation:"fadeInUp",
+  //     delay:100,
+  //     duration:1000
+  // })
+  // .add(".main_bl__chat--bl",{
   //     animation:"fadeInDown",
   //     delay:1000,
   //     duration:500
@@ -1063,22 +1064,45 @@ __webpack_require__.r(__webpack_exports__);
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".sl25-js").slick({
-    dots: true,
-    infinite: false,
-    speed: 2000,
-    arrows: false,
-    slidesToShow: 1,
-    autoplay: true,
-    vertical: true,
-    slidesToScroll: 1,
-    pauseOnHover: false,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        vertical: false
-      }
-    }]
+  var block_show2 = false;
+
+  function scrollTracking() {
+    if (block_show2) {
+      return false;
+    }
+
+    var wt = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
+    var wh = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height();
+    var et = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_sl__title').offset().top;
+    var eh = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_sl__title').outerHeight();
+    var dh = jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).height();
+
+    if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+      block_show2 = true; // Код анимации
+
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_sl__title').addClass('abc');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".sl25-js").slick({
+        dots: true,
+        infinite: true,
+        speed: 2000,
+        arrows: false,
+        slidesToShow: 1,
+        autoplay: true,
+        vertical: true,
+        slidesToScroll: 1,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: 1024,
+          settings: {
+            vertical: false
+          }
+        }]
+      });
+    }
+  }
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
+    scrollTracking();
   });
 });
 
