@@ -128,6 +128,9 @@
             pointer-events: none;
             margin-left: auto;
             margin-right: auto;
+            @media all and (max-width: 480px) {
+                margin-left: -5px;
+            }
         }
         @media all and (max-width: 480px) {
             margin-bottom: 40px;
@@ -155,6 +158,8 @@
         }
         @media all and (max-width: 480px) {
             height: 320px;
+            padding-right: 35px;
+            padding-left: 45px;
         }
         &--item {
             overflow-y: scroll;
@@ -306,4 +311,28 @@
     -webkit-animation-name: dvizheniyaUp;
     animation-name: dvizheniyaUp;
   }
-  
+  .scrollbar-track-y {
+      right: unset !important;
+      left: 13px !important;
+      height: calc(100% - 120px) !important;
+      margin-top: 60px !important;
+      margin-bottom: 60px !important;
+      @media all and (max-width: 480px) {
+          left: 5px !important;
+          height: calc(100% - 60px) !important;
+          margin-top: 30px !important;
+          margin-bottom: 30px !important; 
+      }
+  }
+  .scrollbar-track {
+      background: #fff !important;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+        border-radius: 5px !important;
+  }
+  .scrollbar-thumb {
+      width: 20px !important;
+      height: 20px !important;
+      background: #FF5000 !important;
+        border-radius: 45px !important;
+        left: -5px !important;
+  }

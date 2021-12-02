@@ -205,10 +205,14 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 /*!***********************************************!*\
   !*** ./src/blocks/modules/main_bl/main_bl.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var smooth_scrollbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! smooth-scrollbar */ "./node_modules/smooth-scrollbar/index.js");
 
+smooth_scrollbar__WEBPACK_IMPORTED_MODULE_0__["default"].init(document.querySelector('.main_bl__chat--item'));
 
 /***/ }),
 
@@ -227,7 +231,7 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var skroll = new Skroll().add(".main_blocks__block", {
     animation: "fadeInUp",
-    delay: 250,
+    delay: 150,
     duration: 1000
   }).add(".main_sl__title", {
     animation: "fadeInUp",
@@ -238,10 +242,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     delay: 100,
     duration: 1000
   }).add(".main_form__title", {
-    animation: "fadeInUp",
-    delay: 100,
-    duration: 1000
-  }).add(".main_form__fr", {
     animation: "fadeInUp",
     delay: 100,
     duration: 1000
@@ -285,10 +285,24 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 /*!***************************************************!*\
   !*** ./src/blocks/modules/main_form/main_form.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+// удалить при публикации
 
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_form__next').on('click', function () {
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_form__ques').hasClass('active')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('active');
+    } else {}
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_form__ques').toggleClass('active');
+  });
+}); // удалить при публикации
 
 /***/ }),
 
@@ -1052,12 +1066,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".sl25-js").slick({
     dots: true,
     infinite: false,
-    speed: 300,
+    speed: 2000,
     arrows: false,
     slidesToShow: 1,
     autoplay: true,
     vertical: true,
     slidesToScroll: 1,
+    pauseOnHover: false,
     responsive: [{
       breakpoint: 1024,
       settings: {
@@ -1134,9 +1149,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_main_blocks_main_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/main_blocks/main_blocks */ "./src/blocks/modules/main_blocks/main_blocks.js");
 /* harmony import */ var _modules_main_sl_main_sl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/main_sl/main_sl */ "./src/blocks/modules/main_sl/main_sl.js");
 /* harmony import */ var _modules_main_bl_main_bl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/main_bl/main_bl */ "./src/blocks/modules/main_bl/main_bl.js");
-/* harmony import */ var _modules_main_bl_main_bl__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_main_bl_main_bl__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_main_form_main_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/main_form/main_form */ "./src/blocks/modules/main_form/main_form.js");
-/* harmony import */ var _modules_main_form_main_form__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_main_form_main_form__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_step_step__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/step/step */ "./src/blocks/modules/step/step.js");
 /* harmony import */ var _modules_step_step__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_step_step__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _modules_main_wrk_main_wrk__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/main_wrk/main_wrk */ "./src/blocks/modules/main_wrk/main_wrk.js");

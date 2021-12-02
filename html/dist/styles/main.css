@@ -2248,6 +2248,28 @@ img {
   animation-name: dvizheniyaUp;
 }
 
+.scrollbar-track-y {
+  right: unset !important;
+  left: 13px !important;
+  height: calc(100% - 120px) !important;
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
+}
+
+.scrollbar-track {
+  background: #fff !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 5px !important;
+}
+
+.scrollbar-thumb {
+  width: 20px !important;
+  height: 20px !important;
+  background: #FF5000 !important;
+  border-radius: 45px !important;
+  left: -5px !important;
+}
+
 .main_form {
   max-width: 1668px;
   width: 100%;
@@ -2316,6 +2338,11 @@ img {
   border-radius: 20px;
   margin-top: 40px;
   margin-bottom: 35px;
+  transition: all 1s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 99999px;
 }
 
 .main_form__ques--title {
@@ -2325,6 +2352,13 @@ img {
   font-weight: normal;
   font-size: 40px;
   color: #000000;
+}
+
+.main_form__ques.active {
+  position: relative;
+  opacity: 1;
+  bottom: unset;
+  visibility: visible;
 }
 
 .main_form__next {
@@ -4706,17 +4740,30 @@ img {
     margin-right: auto;
   }
 
+  .main_bl__phone .phone-image {
+    margin-left: -5px;
+  }
+
   .main_bl__phone {
     margin-bottom: 40px;
   }
 
   .main_bl__chat {
     height: 320px;
+    padding-right: 35px;
+    padding-left: 45px;
   }
 
   .main_bl__chat--text {
     max-width: 202px;
     width: 100%;
+  }
+
+  .scrollbar-track-y {
+    left: 5px !important;
+    height: calc(100% - 60px) !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
   }
 
   .main_form__title br {
