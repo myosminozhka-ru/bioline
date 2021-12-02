@@ -2353,6 +2353,8 @@ img {
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
   color: #000000;
 }
 
@@ -2361,6 +2363,11 @@ img {
   transform: scale(1);
   bottom: unset;
   visibility: visible;
+}
+
+.main_form__ques.active .main_form__ques--title {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .main_form__next {
@@ -2440,6 +2447,90 @@ img {
 
 .form_radio label:hover:before {
   filter: brightness(120%);
+}
+
+.atransomas {
+  transition: all 1s ease-out;
+}
+
+.abc2 .main_form__ques.active .atransomas {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.abc2 .main_form__ques.active .bl0 {
+  animation-delay: 0s;
+}
+
+.abc2 .main_form__ques.active .bl1 {
+  animation-delay: 0.5s;
+}
+
+.abc2 .main_form__ques.active .bl2 {
+  animation-delay: 1s;
+}
+
+.abc2 .main_form__ques.active .bl3 {
+  animation-delay: 1.5s;
+}
+
+.abc2 .main_form__ques.active .bl4 {
+  animation-delay: 2s;
+}
+
+.abc2 .main_form__ques.active .bl5 {
+  animation-delay: 2.5s;
+}
+
+.abc2 .main_form__ques.active .bl6 {
+  animation-delay: 3s;
+}
+
+.abc2 .main_form__ques.active .bl7 {
+  animation-delay: 3.5s;
+}
+
+.abc2 .main_form__ques.active .bl8 {
+  animation-delay: 4s;
+}
+
+.abc2 .main_form__ques.active .bl9 {
+  animation-delay: 4.5s;
+}
+
+@-webkit-keyframes dvizheniyaUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes dvizheniyaUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.abc2 .main_form__ques.active .dvizheniyaUp {
+  -webkit-animation-name: dvizheniyaUp;
+  animation-name: dvizheniyaUp;
 }
 
 .main_form.results .main_form__fr {

@@ -106,6 +106,8 @@
             font-style: normal;
             font-weight: normal;
             font-size: 40px;
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
             color: #000000;
             @media all and (max-width: 960px) {
                 font-size: 24px;
@@ -122,6 +124,10 @@
             transform: scale(1);
             bottom: unset;
             visibility: visible;
+            .main_form__ques--title {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
         }
     }
     &__next {
@@ -212,4 +218,81 @@
 /* Hover */
 .form_radio label:hover:before {
 	filter: brightness(120%);
+}
+
+
+
+.atransomas {
+    transition: all 1s ease-out;
+}
+.abc2  {
+    .main_form__ques.active {
+        .atransomas {
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+        }
+            .bl0 {
+                animation-delay: 0s;
+            }
+            .bl1 {
+                animation-delay: 0.5s;
+            }
+            .bl2 {
+                animation-delay: 1s;
+            }
+            .bl3 {
+                animation-delay: 1.5s;
+            }
+            .bl4 {
+                animation-delay: 2s;
+            }
+            .bl5 {
+                animation-delay: 2.5s;
+            }
+            .bl6 {
+                animation-delay: 3s;
+            }
+            .bl7 {
+                animation-delay: 3.5s;
+            }
+            .bl8 {
+                animation-delay: 4s;
+            }
+            .bl9 {
+                animation-delay: 4.5s;
+            }
+        @-webkit-keyframes dvizheniyaUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+          
+            to {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+          }
+          @keyframes dvizheniyaUp {
+            from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+            }
+          
+            to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+            }
+          }
+          
+         .dvizheniyaUp {
+            -webkit-animation-name: dvizheniyaUp;
+            animation-name: dvizheniyaUp;
+          }
+    }
 }

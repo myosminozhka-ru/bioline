@@ -241,18 +241,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     animation: "fadeInUp",
     delay: 100,
     duration: 1000
-  }).add(".main_form__ques", {
-    animation: "fadeInUp",
-    delay: 100,
-    duration: 100
-  }).add(".main_form__ques--title", {
-    animation: "fadeInLeft",
-    delay: 100,
-    duration: 400
-  }).add(".form_radio", {
-    animation: "fadeInLeft",
-    delay: 150,
-    duration: 1000
   }).init();
   var block_show = false;
 
@@ -295,7 +283,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-// удалить при публикации
+ // удалить при публикации
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_form__next').on('click', function () {
@@ -306,6 +294,35 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_form__ques').toggleClass('active');
   });
 }); // удалить при публикации
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  var block_show = false;
+
+  function scrollTracking() {
+    if (block_show) {
+      return false;
+    }
+
+    var wt = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
+    var wh = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height();
+    var et = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_form').offset().top;
+    var eh = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_form').outerHeight();
+    var dh = jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).height();
+
+    if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+      block_show = true; // Код анимации
+
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_form').addClass('abc2');
+    }
+  }
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
+    scrollTracking();
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+    scrollTracking();
+  });
+});
 
 /***/ }),
 
