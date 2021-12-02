@@ -2465,39 +2465,39 @@ img {
 }
 
 .abc2 .main_form__ques.active .bl1 {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 
 .abc2 .main_form__ques.active .bl2 {
-  animation-delay: 1s;
+  animation-delay: 0.6s;
 }
 
 .abc2 .main_form__ques.active .bl3 {
-  animation-delay: 1.5s;
+  animation-delay: 0.9s;
 }
 
 .abc2 .main_form__ques.active .bl4 {
-  animation-delay: 2s;
+  animation-delay: 1.2s;
 }
 
 .abc2 .main_form__ques.active .bl5 {
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 
 .abc2 .main_form__ques.active .bl6 {
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 
 .abc2 .main_form__ques.active .bl7 {
-  animation-delay: 3.5s;
+  animation-delay: 1.8s;
 }
 
 .abc2 .main_form__ques.active .bl8 {
-  animation-delay: 4s;
+  animation-delay: 2.1s;
 }
 
 .abc2 .main_form__ques.active .bl9 {
-  animation-delay: 4.5s;
+  animation-delay: 2.5s;
 }
 
 @-webkit-keyframes dvizheniyaUp {
