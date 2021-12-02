@@ -16,16 +16,21 @@ $(function() {
         delay:100,
         duration:1000
     })
-    // .add(".main_form__title",{
-    //     animation:"fadeInUp",
-    //     delay:100,
-    //     duration:1000
-    // })
-    // .add(".main_bl__chat--bl",{
-    //     animation:"fadeInDown",
-    //     delay:1000,
-    //     duration:500
-    // })1
+    .add(".main_form__ques",{
+        animation:"fadeInUp",
+        delay:100,
+        duration:100
+    })
+    .add(".main_form__ques--title",{
+        animation:"fadeInLeft",
+        delay:100,
+        duration:400
+    })
+    .add(".form_radio",{
+        animation:"fadeInLeft",
+        delay:150,
+        duration:1000
+    })
     .init();
     
 
