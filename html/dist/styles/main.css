@@ -2342,8 +2342,8 @@ img {
   margin-top: 40px;
   margin-bottom: 35px;
   height: max-content !important;
-  transition: all 1s ease-out;
-  transform: scale(0);
+  transition: all .5s ease-out;
+  transform: translate(0, 100%);
   visibility: hidden;
   position: absolute;
   bottom: 99999px;
@@ -2364,7 +2364,7 @@ img {
 
 .main_form__ques.active {
   position: relative;
-  transform: scale(1);
+  transform: translate(0px, 0px);
   bottom: unset;
   visibility: visible;
 }
