@@ -6,7 +6,6 @@
     margin-bottom: -117px;
     position: relative;
     z-index: 10;
-    overflow: hidden;
     &__in {
         @media all and (max-width: 960px) {
             padding-left: 0;
@@ -118,14 +117,18 @@
             height: max-content !important;
         }
         transition: all 1s ease-out;
-        transform: translate(0, 100%);
         visibility: hidden;
         position: absolute;
         bottom: 99999px;
+        @media all and (min-width: 1024px) {
+        transform: translate(0, 100%);
+        }
         &.active {
-            position: relative;
+            @media all and (min-width: 1024px) {
             transform: translate(0px, 0px);
+            }
             bottom: unset;
+            position: relative;
             visibility: visible;
         }
     }
@@ -220,7 +223,7 @@
 	filter: brightness(120%);
 }
 
-
+@media all and (min-width: 1024px) {
 .abc2  {
 .bl0 {
     animation-delay: 0s;
@@ -325,4 +328,5 @@
             animation-name: dvizheniyaUp;
           }
     }
+}
 }
