@@ -229,17 +229,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  var skroll = new Skroll().add(".main_blocks__block", {
-    animation: "fadeInUp",
-    delay: 150,
-    duration: 1000
-  }).add(".main_sl__title", {
+  var skroll = new Skroll().add(".main_sl__title", {
     animation: "fadeInUp",
     delay: 100,
     duration: 1000
   }).add(".main_sl__slides", {
     animation: "fadeInUp",
     delay: 100,
+    duration: 1000
+  }).init();
+  var skroll2 = new Skroll({
+    mobile: true
+  }).add(".main_blocks__block", {
+    animation: "fadeInUp",
+    delay: 150,
     duration: 1000
   }).init();
   var block_show = false;
