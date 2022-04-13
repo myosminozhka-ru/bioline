@@ -1105,13 +1105,15 @@ var ownKeys = __webpack_require__(/*! ../internals/own-keys */ "./node_modules/c
 var getOwnPropertyDescriptorModule = __webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "./node_modules/core-js/internals/object-get-own-property-descriptor.js");
 var definePropertyModule = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js");
 
-module.exports = function (target, source) {
+module.exports = function (target, source, exceptions) {
   var keys = ownKeys(source);
   var defineProperty = definePropertyModule.f;
   var getOwnPropertyDescriptor = getOwnPropertyDescriptorModule.f;
   for (var i = 0; i < keys.length; i++) {
     var key = keys[i];
-    if (!hasOwn(target, key)) defineProperty(target, key, getOwnPropertyDescriptor(source, key));
+    if (!hasOwn(target, key) && !(exceptions && hasOwn(exceptions, key))) {
+      defineProperty(target, key, getOwnPropertyDescriptor(source, key));
+    }
   }
 };
 
@@ -1154,9 +1156,9 @@ var Iterators = __webpack_require__(/*! ../internals/iterators */ "./node_module
 
 var returnThis = function () { return this; };
 
-module.exports = function (IteratorConstructor, NAME, next) {
+module.exports = function (IteratorConstructor, NAME, next, ENUMERABLE_NEXT) {
   var TO_STRING_TAG = NAME + ' Iterator';
-  IteratorConstructor.prototype = create(IteratorPrototype, { next: createPropertyDescriptor(1, next) });
+  IteratorConstructor.prototype = create(IteratorPrototype, { next: createPropertyDescriptor(+!ENUMERABLE_NEXT, next) });
   setToStringTag(IteratorConstructor, TO_STRING_TAG, false, true);
   Iterators[TO_STRING_TAG] = returnThis;
   return IteratorConstructor;
@@ -1560,16 +1562,35 @@ module.exports = !fails(function () {
 
 var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
 var aCallable = __webpack_require__(/*! ../internals/a-callable */ "./node_modules/core-js/internals/a-callable.js");
+var NATIVE_BIND = __webpack_require__(/*! ../internals/function-bind-native */ "./node_modules/core-js/internals/function-bind-native.js");
 
 var bind = uncurryThis(uncurryThis.bind);
 
 // optional / simple context binding
 module.exports = function (fn, that) {
   aCallable(fn);
-  return that === undefined ? fn : bind ? bind(fn, that) : function (/* ...args */) {
+  return that === undefined ? fn : NATIVE_BIND ? bind(fn, that) : function (/* ...args */) {
     return fn.apply(that, arguments);
   };
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/function-bind-native.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/core-js/internals/function-bind-native.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+
+module.exports = !fails(function () {
+  var test = (function () { /* empty */ }).bind();
+  // eslint-disable-next-line no-prototype-builtins -- safe
+  return typeof test != 'function' || test.hasOwnProperty('prototype');
+});
 
 
 /***/ }),
@@ -1579,11 +1600,13 @@ module.exports = function (fn, that) {
   !*** ./node_modules/core-js/internals/function-call.js ***!
   \*********************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var NATIVE_BIND = __webpack_require__(/*! ../internals/function-bind-native */ "./node_modules/core-js/internals/function-bind-native.js");
 
 var call = Function.prototype.call;
 
-module.exports = call.bind ? call.bind(call) : function () {
+module.exports = NATIVE_BIND ? call.bind(call) : function () {
   return call.apply(call, arguments);
 };
 
@@ -1623,15 +1646,17 @@ module.exports = {
   !*** ./node_modules/core-js/internals/function-uncurry-this.js ***!
   \*****************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var NATIVE_BIND = __webpack_require__(/*! ../internals/function-bind-native */ "./node_modules/core-js/internals/function-bind-native.js");
 
 var FunctionPrototype = Function.prototype;
 var bind = FunctionPrototype.bind;
 var call = FunctionPrototype.call;
-var callBind = bind && bind.bind(call);
+var uncurryThis = NATIVE_BIND && bind.bind(call, call);
 
-module.exports = bind ? function (fn) {
-  return fn && callBind(call, fn);
+module.exports = NATIVE_BIND ? function (fn) {
+  return fn && uncurryThis(fn);
 } : function (fn) {
   return fn && function () {
     return call.apply(fn, arguments);
@@ -1813,9 +1838,9 @@ var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_mo
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 var createElement = __webpack_require__(/*! ../internals/document-create-element */ "./node_modules/core-js/internals/document-create-element.js");
 
-// Thank's IE8 for his funny defineProperty
+// Thanks to IE8 for its funny defineProperty
 module.exports = !DESCRIPTORS && !fails(function () {
-  // eslint-disable-next-line es/no-object-defineproperty -- requied for testing
+  // eslint-disable-next-line es/no-object-defineproperty -- required for testing
   return Object.defineProperty(createElement('div'), 'a', {
     get: function () { return 7; }
   }).a != 7;
@@ -2162,7 +2187,7 @@ var constructorRegExp = /^\s*(?:class|function)\b/;
 var exec = uncurryThis(constructorRegExp.exec);
 var INCORRECT_TO_STRING = !constructorRegExp.exec(noop);
 
-var isConstructorModern = function (argument) {
+var isConstructorModern = function isConstructor(argument) {
   if (!isCallable(argument)) return false;
   try {
     construct(noop, empty, argument);
@@ -2172,15 +2197,24 @@ var isConstructorModern = function (argument) {
   }
 };
 
-var isConstructorLegacy = function (argument) {
+var isConstructorLegacy = function isConstructor(argument) {
   if (!isCallable(argument)) return false;
   switch (classof(argument)) {
     case 'AsyncFunction':
     case 'GeneratorFunction':
     case 'AsyncGeneratorFunction': return false;
+  }
+  try {
     // we can't check .prototype since constructors produced by .bind haven't it
-  } return INCORRECT_TO_STRING || !!exec(constructorRegExp, inspectSource(argument));
+    // `Function#toString` throws on some built-it function in some legacy engines
+    // (for example, `DOMQuad` and similar in FF41-)
+    return INCORRECT_TO_STRING || !!exec(constructorRegExp, inspectSource(argument));
+  } catch (error) {
+    return true;
+  }
 };
+
+isConstructorLegacy.sham = true;
 
 // `IsConstructor` abstract operation
 // https://tc39.es/ecma262/#sec-isconstructor
@@ -2602,7 +2636,7 @@ module.exports = !$assign || fails(function () {
 
 /* global ActiveXObject -- old IE, WSH */
 var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
-var defineProperties = __webpack_require__(/*! ../internals/object-define-properties */ "./node_modules/core-js/internals/object-define-properties.js");
+var definePropertiesModule = __webpack_require__(/*! ../internals/object-define-properties */ "./node_modules/core-js/internals/object-define-properties.js");
 var enumBugKeys = __webpack_require__(/*! ../internals/enum-bug-keys */ "./node_modules/core-js/internals/enum-bug-keys.js");
 var hiddenKeys = __webpack_require__(/*! ../internals/hidden-keys */ "./node_modules/core-js/internals/hidden-keys.js");
 var html = __webpack_require__(/*! ../internals/html */ "./node_modules/core-js/internals/html.js");
@@ -2680,7 +2714,7 @@ module.exports = Object.create || function create(O, Properties) {
     // add "__proto__" for Object.getPrototypeOf polyfill
     result[IE_PROTO] = O;
   } else result = NullProtoObject();
-  return Properties === undefined ? result : defineProperties(result, Properties);
+  return Properties === undefined ? result : definePropertiesModule.f(result, Properties);
 };
 
 
@@ -2694,6 +2728,7 @@ module.exports = Object.create || function create(O, Properties) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
+var V8_PROTOTYPE_DEFINE_BUG = __webpack_require__(/*! ../internals/v8-prototype-define-bug */ "./node_modules/core-js/internals/v8-prototype-define-bug.js");
 var definePropertyModule = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js");
 var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
 var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
@@ -2702,7 +2737,7 @@ var objectKeys = __webpack_require__(/*! ../internals/object-keys */ "./node_mod
 // `Object.defineProperties` method
 // https://tc39.es/ecma262/#sec-object.defineproperties
 // eslint-disable-next-line es/no-object-defineproperties -- safe
-module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperties(O, Properties) {
+exports.f = DESCRIPTORS && !V8_PROTOTYPE_DEFINE_BUG ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
   var props = toIndexedObject(Properties);
   var keys = objectKeys(Properties);
@@ -2726,16 +2761,37 @@ module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperti
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
 var IE8_DOM_DEFINE = __webpack_require__(/*! ../internals/ie8-dom-define */ "./node_modules/core-js/internals/ie8-dom-define.js");
+var V8_PROTOTYPE_DEFINE_BUG = __webpack_require__(/*! ../internals/v8-prototype-define-bug */ "./node_modules/core-js/internals/v8-prototype-define-bug.js");
 var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
 var toPropertyKey = __webpack_require__(/*! ../internals/to-property-key */ "./node_modules/core-js/internals/to-property-key.js");
 
 var TypeError = global.TypeError;
 // eslint-disable-next-line es/no-object-defineproperty -- safe
 var $defineProperty = Object.defineProperty;
+// eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
+var $getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var ENUMERABLE = 'enumerable';
+var CONFIGURABLE = 'configurable';
+var WRITABLE = 'writable';
 
 // `Object.defineProperty` method
 // https://tc39.es/ecma262/#sec-object.defineproperty
-exports.f = DESCRIPTORS ? $defineProperty : function defineProperty(O, P, Attributes) {
+exports.f = DESCRIPTORS ? V8_PROTOTYPE_DEFINE_BUG ? function defineProperty(O, P, Attributes) {
+  anObject(O);
+  P = toPropertyKey(P);
+  anObject(Attributes);
+  if (typeof O === 'function' && P === 'prototype' && 'value' in Attributes && WRITABLE in Attributes && !Attributes[WRITABLE]) {
+    var current = $getOwnPropertyDescriptor(O, P);
+    if (current && current[WRITABLE]) {
+      O[P] = Attributes.value;
+      Attributes = {
+        configurable: CONFIGURABLE in Attributes ? Attributes[CONFIGURABLE] : current[CONFIGURABLE],
+        enumerable: ENUMERABLE in Attributes ? Attributes[ENUMERABLE] : current[ENUMERABLE],
+        writable: false
+      };
+    }
+  } return $defineProperty(O, P, Attributes);
+} : $defineProperty : function defineProperty(O, P, Attributes) {
   anObject(O);
   P = toPropertyKey(P);
   anObject(Attributes);
@@ -3289,9 +3345,10 @@ var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ 
 
 var TO_STRING_TAG = wellKnownSymbol('toStringTag');
 
-module.exports = function (it, TAG, STATIC) {
-  if (it && !hasOwn(it = STATIC ? it : it.prototype, TO_STRING_TAG)) {
-    defineProperty(it, TO_STRING_TAG, { configurable: true, value: TAG });
+module.exports = function (target, TAG, STATIC) {
+  if (target && !STATIC) target = target.prototype;
+  if (target && !hasOwn(target, TO_STRING_TAG)) {
+    defineProperty(target, TO_STRING_TAG, { configurable: true, value: TAG });
   }
 };
 
@@ -3348,9 +3405,11 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
-  version: '3.19.2',
+  version: '3.21.1',
   mode: IS_PURE ? 'pure' : 'global',
-  copyright: '© 2021 Denis Pushkarev (zloirock.ru)'
+  copyright: '© 2014-2022 Denis Pushkarev (zloirock.ru)',
+  license: 'https://github.com/zloirock/core-js/blob/v3.21.1/LICENSE',
+  source: 'https://github.com/zloirock/core-js'
 });
 
 
@@ -3661,6 +3720,29 @@ module.exports = NATIVE_SYMBOL
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/v8-prototype-define-bug.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/core-js/internals/v8-prototype-define-bug.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+
+// V8 ~ Chrome 36-
+// https://bugs.chromium.org/p/v8/issues/detail?id=3334
+module.exports = DESCRIPTORS && fails(function () {
+  // eslint-disable-next-line es/no-object-defineproperty -- required for testing
+  return Object.defineProperty(function () { /* empty */ }, 'prototype', {
+    value: 42,
+    writable: false
+  }).prototype != 42;
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/well-known-symbol.js":
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/internals/well-known-symbol.js ***!
@@ -3734,7 +3816,10 @@ var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ 
 var addToUnscopables = __webpack_require__(/*! ../internals/add-to-unscopables */ "./node_modules/core-js/internals/add-to-unscopables.js");
 var Iterators = __webpack_require__(/*! ../internals/iterators */ "./node_modules/core-js/internals/iterators.js");
 var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */ "./node_modules/core-js/internals/internal-state.js");
+var defineProperty = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js").f;
 var defineIterator = __webpack_require__(/*! ../internals/define-iterator */ "./node_modules/core-js/internals/define-iterator.js");
+var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
+var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
 
 var ARRAY_ITERATOR = 'Array Iterator';
 var setInternalState = InternalStateModule.set;
@@ -3776,12 +3861,17 @@ module.exports = defineIterator(Array, 'Array', function (iterated, kind) {
 // argumentsList[@@iterator] is %ArrayProto_values%
 // https://tc39.es/ecma262/#sec-createunmappedargumentsobject
 // https://tc39.es/ecma262/#sec-createmappedargumentsobject
-Iterators.Arguments = Iterators.Array;
+var values = Iterators.Arguments = Iterators.Array;
 
 // https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
 addToUnscopables('keys');
 addToUnscopables('values');
 addToUnscopables('entries');
+
+// V8 ~ Chrome 45- bug
+if (!IS_PURE && DESCRIPTORS && values.name !== 'values') try {
+  defineProperty(values, 'name', { value: 'values' });
+} catch (error) { /* empty */ }
 
 
 /***/ }),
@@ -3927,7 +4017,7 @@ var collection = __webpack_require__(/*! ../internals/collection */ "./node_modu
 var collectionWeak = __webpack_require__(/*! ../internals/collection-weak */ "./node_modules/core-js/internals/collection-weak.js");
 var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
 var isExtensible = __webpack_require__(/*! ../internals/object-is-extensible */ "./node_modules/core-js/internals/object-is-extensible.js");
-var enforceIternalState = __webpack_require__(/*! ../internals/internal-state */ "./node_modules/core-js/internals/internal-state.js").enforce;
+var enforceInternalState = __webpack_require__(/*! ../internals/internal-state */ "./node_modules/core-js/internals/internal-state.js").enforce;
 var NATIVE_WEAK_MAP = __webpack_require__(/*! ../internals/native-weak-map */ "./node_modules/core-js/internals/native-weak-map.js");
 
 var IS_IE11 = !global.ActiveXObject && 'ActiveXObject' in global;
@@ -3957,28 +4047,28 @@ if (NATIVE_WEAK_MAP && IS_IE11) {
   redefineAll(WeakMapPrototype, {
     'delete': function (key) {
       if (isObject(key) && !isExtensible(key)) {
-        var state = enforceIternalState(this);
+        var state = enforceInternalState(this);
         if (!state.frozen) state.frozen = new InternalWeakMap();
         return nativeDelete(this, key) || state.frozen['delete'](key);
       } return nativeDelete(this, key);
     },
     has: function has(key) {
       if (isObject(key) && !isExtensible(key)) {
-        var state = enforceIternalState(this);
+        var state = enforceInternalState(this);
         if (!state.frozen) state.frozen = new InternalWeakMap();
         return nativeHas(this, key) || state.frozen.has(key);
       } return nativeHas(this, key);
     },
     get: function get(key) {
       if (isObject(key) && !isExtensible(key)) {
-        var state = enforceIternalState(this);
+        var state = enforceInternalState(this);
         if (!state.frozen) state.frozen = new InternalWeakMap();
         return nativeHas(this, key) ? nativeGet(this, key) : state.frozen.get(key);
       } return nativeGet(this, key);
     },
     set: function set(key, value) {
       if (isObject(key) && !isExtensible(key)) {
-        var state = enforceIternalState(this);
+        var state = enforceInternalState(this);
         if (!state.frozen) state.frozen = new InternalWeakMap();
         nativeHas(this, key) ? nativeSet(this, key, value) : state.frozen.set(key, value);
       } else nativeSet(this, key, value);
@@ -14893,7 +14983,7 @@ return jQuery;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /*!
- * lightgallery | 2.3.0 | October 28th 2021
+ * lightgallery | 2.4.0 | January 29th 2022
  * http://www.lightgalleryjs.com/
  * Copyright (c) 2020 Sachin Neravath;
  * @license GPLv3
@@ -14932,6 +15022,116 @@ function __spreadArrays() {
             r[k] = a[j];
     return r;
 }
+
+/**
+ * List of lightGallery events
+ * All events should be documented here
+ * Below interfaces are used to build the website documentations
+ * */
+var lGEvents = {
+    afterAppendSlide: 'lgAfterAppendSlide',
+    init: 'lgInit',
+    hasVideo: 'lgHasVideo',
+    containerResize: 'lgContainerResize',
+    updateSlides: 'lgUpdateSlides',
+    afterAppendSubHtml: 'lgAfterAppendSubHtml',
+    beforeOpen: 'lgBeforeOpen',
+    afterOpen: 'lgAfterOpen',
+    slideItemLoad: 'lgSlideItemLoad',
+    beforeSlide: 'lgBeforeSlide',
+    afterSlide: 'lgAfterSlide',
+    posterClick: 'lgPosterClick',
+    dragStart: 'lgDragStart',
+    dragMove: 'lgDragMove',
+    dragEnd: 'lgDragEnd',
+    beforeNextSlide: 'lgBeforeNextSlide',
+    beforePrevSlide: 'lgBeforePrevSlide',
+    beforeClose: 'lgBeforeClose',
+    afterClose: 'lgAfterClose',
+    rotateLeft: 'lgRotateLeft',
+    rotateRight: 'lgRotateRight',
+    flipHorizontal: 'lgFlipHorizontal',
+    flipVertical: 'lgFlipVertical',
+    autoplay: 'lgAutoplay',
+    autoplayStart: 'lgAutoplayStart',
+    autoplayStop: 'lgAutoplayStop',
+};
+
+var lightGalleryCoreSettings = {
+    mode: 'lg-slide',
+    easing: 'ease',
+    speed: 400,
+    licenseKey: '0000-0000-000-0000',
+    height: '100%',
+    width: '100%',
+    addClass: '',
+    startClass: 'lg-start-zoom',
+    backdropDuration: 300,
+    container: '',
+    startAnimationDuration: 400,
+    zoomFromOrigin: true,
+    hideBarsDelay: 0,
+    showBarsAfter: 10000,
+    slideDelay: 0,
+    supportLegacyBrowser: true,
+    allowMediaOverlap: false,
+    videoMaxSize: '1280-720',
+    loadYouTubePoster: true,
+    defaultCaptionHeight: 0,
+    ariaLabelledby: '',
+    ariaDescribedby: '',
+    closable: true,
+    swipeToClose: true,
+    closeOnTap: true,
+    showCloseIcon: true,
+    showMaximizeIcon: false,
+    loop: true,
+    escKey: true,
+    keyPress: true,
+    controls: true,
+    slideEndAnimation: true,
+    hideControlOnEnd: false,
+    mousewheel: false,
+    getCaptionFromTitleOrAlt: true,
+    appendSubHtmlTo: '.lg-sub-html',
+    subHtmlSelectorRelative: false,
+    preload: 2,
+    numberOfSlideItemsInDom: 10,
+    selector: '',
+    selectWithin: '',
+    nextHtml: '',
+    prevHtml: '',
+    index: 0,
+    iframeWidth: '100%',
+    iframeHeight: '100%',
+    iframeMaxWidth: '100%',
+    iframeMaxHeight: '100%',
+    download: true,
+    counter: true,
+    appendCounterTo: '.lg-toolbar',
+    swipeThreshold: 50,
+    enableSwipe: true,
+    enableDrag: true,
+    dynamic: false,
+    dynamicEl: [],
+    extraProps: [],
+    exThumbImage: '',
+    isMobile: undefined,
+    mobileSettings: {
+        controls: false,
+        showCloseIcon: false,
+        download: false,
+    },
+    plugins: [],
+    strings: {
+        closeGallery: 'Close gallery',
+        toggleMaximize: 'Toggle maximize',
+        previousSlide: 'Previous slide',
+        nextSlide: 'Next slide',
+        download: 'Download',
+        playVideo: 'Play video',
+    },
+};
 
 function initLgPolyfills() {
     (function () {
@@ -15190,8 +15390,10 @@ var lgQuery = /** @class */ (function () {
     // Does not support IE
     lgQuery.prototype.load = function (url) {
         var _this = this;
-        fetch(url).then(function (res) {
-            _this.selector.innerHTML = res;
+        fetch(url)
+            .then(function (res) { return res.text(); })
+            .then(function (html) {
+            _this.selector.innerHTML = html;
         });
         return this;
     };
@@ -15489,7 +15691,7 @@ var utils = {
         // No other way of checking: assume it’s ok.
         return true;
     },
-    getVideoPosterMarkup: function (_poster, dummyImg, videoContStyle, _isVideo) {
+    getVideoPosterMarkup: function (_poster, dummyImg, videoContStyle, playVideoString, _isVideo) {
         var videoClass = '';
         if (_isVideo && _isVideo.youtube) {
             videoClass = 'lg-has-youtube';
@@ -15500,7 +15702,7 @@ var utils = {
         else {
             videoClass = 'lg-has-html5';
         }
-        return "<div class=\"lg-video-cont " + videoClass + "\" style=\"" + videoContStyle + "\">\n                <div class=\"lg-video-play-button\">\n                <svg\n                    viewBox=\"0 0 20 20\"\n                    preserveAspectRatio=\"xMidYMid\"\n                    focusable=\"false\"\n                    aria-labelledby=\"Play video\"\n                    role=\"img\"\n                    class=\"lg-video-play-icon\"\n                >\n                    <title>Play video</title>\n                    <polygon class=\"lg-video-play-icon-inner\" points=\"1,0 20,10 1,20\"></polygon>\n                </svg>\n                <svg class=\"lg-video-play-icon-bg\" viewBox=\"0 0 50 50\" focusable=\"false\">\n                    <circle cx=\"50%\" cy=\"50%\" r=\"20\"></circle></svg>\n                <svg class=\"lg-video-play-icon-circle\" viewBox=\"0 0 50 50\" focusable=\"false\">\n                    <circle cx=\"50%\" cy=\"50%\" r=\"20\"></circle>\n                </svg>\n            </div>\n            " + (dummyImg || '') + "\n            <img class=\"lg-object lg-video-poster\" src=\"" + _poster + "\" />\n        </div>";
+        return "<div class=\"lg-video-cont " + videoClass + "\" style=\"" + videoContStyle + "\">\n                <div class=\"lg-video-play-button\">\n                <svg\n                    viewBox=\"0 0 20 20\"\n                    preserveAspectRatio=\"xMidYMid\"\n                    focusable=\"false\"\n                    aria-labelledby=\"" + playVideoString + "\"\n                    role=\"img\"\n                    class=\"lg-video-play-icon\"\n                >\n                    <title>" + playVideoString + "</title>\n                    <polygon class=\"lg-video-play-icon-inner\" points=\"1,0 20,10 1,20\"></polygon>\n                </svg>\n                <svg class=\"lg-video-play-icon-bg\" viewBox=\"0 0 50 50\" focusable=\"false\">\n                    <circle cx=\"50%\" cy=\"50%\" r=\"20\"></circle></svg>\n                <svg class=\"lg-video-play-icon-circle\" viewBox=\"0 0 50 50\" focusable=\"false\">\n                    <circle cx=\"50%\" cy=\"50%\" r=\"20\"></circle>\n                </svg>\n            </div>\n            " + (dummyImg || '') + "\n            <img class=\"lg-object lg-video-poster\" src=\"" + _poster + "\" />\n        </div>";
     },
     /**
      * @desc Create dynamic elements array from gallery items when dynamic option is false
@@ -15586,105 +15788,6 @@ var utils = {
             };
         }
     },
-};
-
-var lightGalleryCoreSettings = {
-    mode: 'lg-slide',
-    easing: 'ease',
-    speed: 400,
-    licenseKey: '0000-0000-000-0000',
-    height: '100%',
-    width: '100%',
-    addClass: '',
-    startClass: 'lg-start-zoom',
-    backdropDuration: 300,
-    container: '',
-    startAnimationDuration: 400,
-    zoomFromOrigin: true,
-    hideBarsDelay: 0,
-    showBarsAfter: 10000,
-    slideDelay: 0,
-    supportLegacyBrowser: true,
-    allowMediaOverlap: false,
-    videoMaxSize: '1280-720',
-    loadYouTubePoster: true,
-    defaultCaptionHeight: 0,
-    ariaLabelledby: '',
-    ariaDescribedby: '',
-    closable: true,
-    swipeToClose: true,
-    closeOnTap: true,
-    showCloseIcon: true,
-    showMaximizeIcon: false,
-    loop: true,
-    escKey: true,
-    keyPress: true,
-    controls: true,
-    slideEndAnimation: true,
-    hideControlOnEnd: false,
-    mousewheel: false,
-    getCaptionFromTitleOrAlt: true,
-    appendSubHtmlTo: '.lg-sub-html',
-    subHtmlSelectorRelative: false,
-    preload: 2,
-    numberOfSlideItemsInDom: 10,
-    selector: '',
-    selectWithin: '',
-    nextHtml: '',
-    prevHtml: '',
-    index: 0,
-    iframeWidth: '100%',
-    iframeHeight: '100%',
-    iframeMaxWidth: '100%',
-    iframeMaxHeight: '100%',
-    download: true,
-    counter: true,
-    appendCounterTo: '.lg-toolbar',
-    swipeThreshold: 50,
-    enableSwipe: true,
-    enableDrag: true,
-    dynamic: false,
-    dynamicEl: [],
-    extraProps: [],
-    exThumbImage: '',
-    isMobile: undefined,
-    mobileSettings: {
-        controls: false,
-        showCloseIcon: false,
-        download: false,
-    },
-    plugins: [],
-};
-
-/**
- * List of lightGallery events
- * All events should be documented here
- * Below interfaces are used to build the website documentations
- * */
-var lGEvents = {
-    afterAppendSlide: 'lgAfterAppendSlide',
-    init: 'lgInit',
-    hasVideo: 'lgHasVideo',
-    containerResize: 'lgContainerResize',
-    updateSlides: 'lgUpdateSlides',
-    afterAppendSubHtml: 'lgAfterAppendSubHtml',
-    beforeOpen: 'lgBeforeOpen',
-    afterOpen: 'lgAfterOpen',
-    slideItemLoad: 'lgSlideItemLoad',
-    beforeSlide: 'lgBeforeSlide',
-    afterSlide: 'lgAfterSlide',
-    posterClick: 'lgPosterClick',
-    dragStart: 'lgDragStart',
-    dragMove: 'lgDragMove',
-    dragEnd: 'lgDragEnd',
-    beforeNextSlide: 'lgBeforeNextSlide',
-    beforePrevSlide: 'lgBeforePrevSlide',
-    beforeClose: 'lgBeforeClose',
-    afterClose: 'lgAfterClose',
-    rotateLeft: 'lgRotateLeft',
-    rotateRight: 'lgRotateRight',
-    flipHorizontal: 'lgFlipHorizontal',
-    flipVertical: 'lgFlipVertical',
 };
 
 // @ref - https://stackoverflow.com/questions/3971841/how-to-resize-images-proportionally-keeping-the-aspect-ratio
@@ -15858,7 +15961,7 @@ var LightGallery = /** @class */ (function () {
         var subHtmlCont = '';
         // Create controls
         if (this.settings.controls) {
-            controls = "<button type=\"button\" id=\"" + this.getIdName('lg-prev') + "\" aria-label=\"Previous slide\" class=\"lg-prev lg-icon\"> " + this.settings.prevHtml + " </button>\n                <button type=\"button\" id=\"" + this.getIdName('lg-next') + "\" aria-label=\"Next slide\" class=\"lg-next lg-icon\"> " + this.settings.nextHtml + " </button>";
+            controls = "<button type=\"button\" id=\"" + this.getIdName('lg-prev') + "\" aria-label=\"" + this.settings.strings['previousSlide'] + "\" class=\"lg-prev lg-icon\"> " + this.settings.prevHtml + " </button>\n                <button type=\"button\" id=\"" + this.getIdName('lg-next') + "\" aria-label=\"" + this.settings.strings['nextSlide'] + "\" class=\"lg-next lg-icon\"> " + this.settings.nextHtml + " </button>";
         }
         if (this.settings.appendSubHtmlTo !== '.lg-item') {
             subHtmlCont =
@@ -15877,19 +15980,20 @@ var LightGallery = /** @class */ (function () {
             : '';
         var containerClassName = "lg-container " + this.settings.addClass + " " + (document.body !== this.settings.container ? 'lg-inline' : '');
         var closeIcon = this.settings.closable && this.settings.showCloseIcon
-            ? "<button type=\"button\" aria-label=\"Close gallery\" id=\"" + this.getIdName('lg-close') + "\" class=\"lg-close lg-icon\"></button>"
+            ? "<button type=\"button\" aria-label=\"" + this.settings.strings['closeGallery'] + "\" id=\"" + this.getIdName('lg-close') + "\" class=\"lg-close lg-icon\"></button>"
             : '';
         var maximizeIcon = this.settings.showMaximizeIcon
-            ? "<button type=\"button\" aria-label=\"Toggle maximize\" id=\"" + this.getIdName('lg-maximize') + "\" class=\"lg-maximize lg-icon\"></button>"
+            ? "<button type=\"button\" aria-label=\"" + this.settings.strings['toggleMaximize'] + "\" id=\"" + this.getIdName('lg-maximize') + "\" class=\"lg-maximize lg-icon\"></button>"
             : '';
         var template = "\n        <div class=\"" + containerClassName + "\" id=\"" + this.getIdName('lg-container') + "\" tabindex=\"-1\" aria-modal=\"true\" " + ariaLabelledby + " " + ariaDescribedby + " role=\"dialog\"\n        >\n            <div id=\"" + this.getIdName('lg-backdrop') + "\" class=\"lg-backdrop\"></div>\n\n            <div id=\"" + this.getIdName('lg-outer') + "\" class=\"lg-outer lg-use-css3 lg-css3 lg-hide-items " + addClasses + " \">\n\n              <div id=\"" + this.getIdName('lg-content') + "\" class=\"lg-content\">\n                <div id=\"" + this.getIdName('lg-inner') + "\" class=\"lg-inner\">\n                </div>\n                " + controls + "\n              </div>\n                <div id=\"" + this.getIdName('lg-toolbar') + "\" class=\"lg-toolbar lg-group\">\n                    " + maximizeIcon + "\n                    " + closeIcon + "\n                    </div>\n                    " + (this.settings.appendSubHtmlTo === '.lg-outer'
             ? subHtmlCont
             : '') + "\n                <div id=\"" + this.getIdName('lg-components') + "\" class=\"lg-components\">\n                    " + (this.settings.appendSubHtmlTo === '.lg-sub-html'
             ? subHtmlCont
             : '') + "\n                </div>\n            </div>\n        </div>\n        ";
-        $LG(this.settings.container)
-            .css('position', 'relative')
-            .append(template);
+        $LG(this.settings.container).append(template);
+        if (document.body !== this.settings.container) {
+            $LG(this.settings.container).css('position', 'relative');
+        }
         this.outer = this.getElementById('lg-outer');
         this.$lgComponents = this.getElementById('lg-components');
         this.$backdrop = this.getElementById('lg-backdrop');
@@ -15907,7 +16011,7 @@ var LightGallery = /** @class */ (function () {
         this.$inner.css('transition-timing-function', this.settings.easing);
         this.$inner.css('transition-duration', this.settings.speed + 'ms');
         if (this.settings.download) {
-            this.$toolbar.append("<a id=\"" + this.getIdName('lg-download') + "\" target=\"_blank\" rel=\"noopener\" aria-label=\"Download\" download class=\"lg-download lg-icon\"></a>");
+            this.$toolbar.append("<a id=\"" + this.getIdName('lg-download') + "\" target=\"_blank\" rel=\"noopener\" aria-label=\"" + this.settings.strings['download'] + "\" download class=\"lg-download lg-icon\"></a>");
         }
         this.counter();
         $LG(window).on("resize.lg.global" + this.lgId + " orientationchange.lg.global" + this.lgId, function () {
@@ -16487,7 +16591,7 @@ var LightGallery = /** @class */ (function () {
                 if (hasStartAnimation) {
                     dummyImg = this.getDummyImageContent($currentSlide, index, '');
                 }
-                var markup = utils.getVideoPosterMarkup(poster, dummyImg || '', lgVideoStyle, videoInfo);
+                var markup = utils.getVideoPosterMarkup(poster, dummyImg || '', lgVideoStyle, this.settings.strings['playVideo'], videoInfo);
                 $currentSlide.prepend(markup);
             }
             else if (videoInfo) {
@@ -21867,8 +21971,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var activeScrollbar;
 function touchHandler(scrollbar) {
-    var MIN_EAING_MOMENTUM = 50;
-    var EASING_MULTIPLIER = /Android/.test(navigator.userAgent) ? 3 : 2;
     var target = scrollbar.options.delegateTo || scrollbar.containerEl;
     var touchRecord = new _utils___WEBPACK_IMPORTED_MODULE_0__["TouchRecord"]();
     var addEvent = Object(_utils___WEBPACK_IMPORTED_MODULE_0__["eventScope"])(scrollbar);
@@ -21899,14 +22001,8 @@ function touchHandler(scrollbar) {
         });
     });
     addEvent(target, 'touchcancel touchend', function (evt) {
-        var velocity = touchRecord.getVelocity();
-        var momentum = { x: 0, y: 0 };
-        Object.keys(velocity).forEach(function (dir) {
-            var s = velocity[dir] / damping;
-            // throw small values
-            momentum[dir] = Math.abs(s) < MIN_EAING_MOMENTUM ? 0 : s * EASING_MULTIPLIER;
-        });
-        scrollbar.addTransformableMomentum(momentum.x, momentum.y, evt);
+        var delta = touchRecord.getEasingDistance(damping);
+        scrollbar.addTransformableMomentum(delta.x, delta.y, evt);
         pointerCount--;
         // restore damping
         if (pointerCount === 0) {
@@ -22231,7 +22327,7 @@ var SmoothScrollbar = /** @class */ (function (_super) {
     SmoothScrollbar.detachStyle = function () {
         return Object(_style__WEBPACK_IMPORTED_MODULE_4__["detachStyle"])();
     };
-    SmoothScrollbar.version = "8.7.0";
+    SmoothScrollbar.version = "8.7.4";
     SmoothScrollbar.ScrollbarPlugin = _plugin__WEBPACK_IMPORTED_MODULE_3__["ScrollbarPlugin"];
     return SmoothScrollbar;
 }(_scrollbar__WEBPACK_IMPORTED_MODULE_2__["Scrollbar"]));
@@ -22487,6 +22583,7 @@ var Scrollbar = /** @class */ (function () {
             bottom: 0,
             left: 0,
         };
+        // private _observer: ResizeObserver;
         this._plugins = [];
         this._momentum = { x: 0, y: 0 };
         this._listeners = new Set();
@@ -22524,17 +22621,14 @@ var Scrollbar = /** @class */ (function () {
         this.setPosition(scrollLeft, scrollTop, {
             withoutCallbacks: true,
         });
-        var global = window;
-        var MutationObserver = global.MutationObserver || global.WebKitMutationObserver || global.MozMutationObserver;
+        // FIXME: update typescript
+        var ResizeObserver = window.ResizeObserver;
         // observe
-        if (typeof MutationObserver === 'function') {
-            this._observer = new MutationObserver(function () {
+        if (typeof ResizeObserver === 'function') {
+            this._observer = new ResizeObserver(function () {
                 _this.update();
             });
-            this._observer.observe(contentEl, {
-                subtree: true,
-                childList: true,
-            });
+            this._observer.observe(contentEl);
         }
         scrollbarMap.set(containerEl, this);
         // wait for DOM ready
@@ -23485,6 +23579,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Tracker = /** @class */ (function () {
     function Tracker(touch) {
+        this.velocityMultiplier = /Android/.test(navigator.userAgent) ? window.devicePixelRatio : 1;
         this.updateTime = Date.now();
         this.delta = { x: 0, y: 0 };
         this.velocity = { x: 0, y: 0 };
@@ -23499,11 +23594,11 @@ var Tracker = /** @class */ (function () {
             x: -(position.x - lastPosition.x),
             y: -(position.y - lastPosition.y),
         };
-        var duration = (now - updateTime) || 16;
-        var vx = delta.x / duration * 16;
-        var vy = delta.y / duration * 16;
-        velocity.x = vx * 0.9 + velocity.x * 0.1;
-        velocity.y = vy * 0.9 + velocity.y * 0.1;
+        var duration = (now - updateTime) || 16.7;
+        var vx = delta.x / duration * 16.7;
+        var vy = delta.y / duration * 16.7;
+        velocity.x = vx * this.velocityMultiplier;
+        velocity.y = vy * this.velocityMultiplier;
         this.delta = delta;
         this.updateTime = now;
         this.lastPosition = position;
@@ -23539,6 +23634,23 @@ var TouchRecord = /** @class */ (function () {
         }
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, tracker.velocity);
     };
+    TouchRecord.prototype.getEasingDistance = function (damping) {
+        var deAcceleration = 1 - damping;
+        var distance = {
+            x: 0,
+            y: 0,
+        };
+        var vel = this.getVelocity();
+        Object.keys(vel).forEach(function (dir) {
+            // ignore small velocity
+            var v = Math.abs(vel[dir]) <= 10 ? 0 : vel[dir];
+            while (v !== 0) {
+                distance[dir] += v;
+                v = (v * deAcceleration) | 0;
+            }
+        });
+        return distance;
+    };
     TouchRecord.prototype.track = function (evt) {
         var _this = this;
         var targetTouches = evt.targetTouches;
@@ -23565,7 +23677,8 @@ var TouchRecord = /** @class */ (function () {
     };
     TouchRecord.prototype._add = function (touch) {
         if (this._has(touch)) {
-            return;
+            // reset tracker
+            this._delete(touch);
         }
         var tracker = new Tracker(touch);
         this._touchList[touch.identifier] = tracker;

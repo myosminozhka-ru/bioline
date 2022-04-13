@@ -216,65 +216,6 @@ smooth_scrollbar__WEBPACK_IMPORTED_MODULE_0__["default"].init(document.querySele
 
 /***/ }),
 
-/***/ "./src/blocks/modules/main_blocks/main_blocks.js":
-/*!*******************************************************!*\
-  !*** ./src/blocks/modules/main_blocks/main_blocks.js ***!
-  \*******************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  var skroll = new Skroll().add(".main_sl__title", {
-    animation: "fadeInUp",
-    delay: 100,
-    duration: 1000
-  }).add(".main_sl__slides", {
-    animation: "fadeInUp",
-    delay: 100,
-    duration: 1000
-  }).init();
-  var skroll2 = new Skroll({
-    mobile: true
-  }).add(".main_blocks__block", {
-    animation: "fadeInUp",
-    delay: 150,
-    duration: 1000
-  }).init();
-  var block_show = false;
-
-  function scrollTracking() {
-    if (block_show) {
-      return false;
-    }
-
-    var wt = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
-    var wh = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height();
-    var et = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_phone').offset().top;
-    var eh = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_phone').outerHeight();
-    var dh = jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).height();
-
-    if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-      block_show = true; // Код анимации
-
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_phone').addClass('abc');
-    }
-  }
-
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
-    scrollTracking();
-  });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-    scrollTracking();
-  });
-});
-
-/***/ }),
-
 /***/ "./src/blocks/modules/main_form/main_form.js":
 /*!***************************************************!*\
   !*** ./src/blocks/modules/main_form/main_form.js ***!
@@ -438,7 +379,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
 /* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
 /* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_2__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 
 
@@ -1192,19 +1133,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
-/* harmony import */ var _modules_main_blocks_main_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/main_blocks/main_blocks */ "./src/blocks/modules/main_blocks/main_blocks.js");
-/* harmony import */ var _modules_main_sl_main_sl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/main_sl/main_sl */ "./src/blocks/modules/main_sl/main_sl.js");
-/* harmony import */ var _modules_main_bl_main_bl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/main_bl/main_bl */ "./src/blocks/modules/main_bl/main_bl.js");
-/* harmony import */ var _modules_main_form_main_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/main_form/main_form */ "./src/blocks/modules/main_form/main_form.js");
-/* harmony import */ var _modules_step_step__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/step/step */ "./src/blocks/modules/step/step.js");
-/* harmony import */ var _modules_step_step__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_step_step__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _modules_main_wrk_main_wrk__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/main_wrk/main_wrk */ "./src/blocks/modules/main_wrk/main_wrk.js");
-/* harmony import */ var _modules_main_ser_main_ser__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/main_ser/main_ser */ "./src/blocks/modules/main_ser/main_ser.js");
-/* harmony import */ var _modules_main_rev_main_rev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/main_rev/main_rev */ "./src/blocks/modules/main_rev/main_rev.js");
-/* harmony import */ var _modules_main_map_main_map__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/main_map/main_map */ "./src/blocks/modules/main_map/main_map.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_10__);
-
+/* harmony import */ var _modules_main_sl_main_sl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/main_sl/main_sl */ "./src/blocks/modules/main_sl/main_sl.js");
+/* harmony import */ var _modules_main_bl_main_bl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/main_bl/main_bl */ "./src/blocks/modules/main_bl/main_bl.js");
+/* harmony import */ var _modules_main_form_main_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/main_form/main_form */ "./src/blocks/modules/main_form/main_form.js");
+/* harmony import */ var _modules_step_step__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/step/step */ "./src/blocks/modules/step/step.js");
+/* harmony import */ var _modules_step_step__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_step_step__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_main_wrk_main_wrk__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/main_wrk/main_wrk */ "./src/blocks/modules/main_wrk/main_wrk.js");
+/* harmony import */ var _modules_main_ser_main_ser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/main_ser/main_ser */ "./src/blocks/modules/main_ser/main_ser.js");
+/* harmony import */ var _modules_main_rev_main_rev__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/main_rev/main_rev */ "./src/blocks/modules/main_rev/main_rev.js");
+/* harmony import */ var _modules_main_map_main_map__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/main_map/main_map */ "./src/blocks/modules/main_map/main_map.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -1225,7 +1164,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 /* Skroll v2.0.1, akzhy.com/shelf/skroll | github.com/akzhy/skroll */
 Skroll = function Skroll(t) {
