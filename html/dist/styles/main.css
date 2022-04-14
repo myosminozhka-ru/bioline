@@ -2002,8 +2002,6 @@ img {
   padding: 0;
   margin: 0;
   list-style: none;
-  width: 100%;
-  max-width: 570px;
 }
 
 .main_bl__block--list li {
@@ -4558,8 +4556,14 @@ img {
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 27px;
-    padding-left: 15px;
-    padding-right: 15px;
+  }
+
+  .main_bl__block--list li {
+    align-items: flex-start;
+  }
+
+  .main_bl__block--text {
+    font-size: 14px;
   }
 
   .main_bl__block--r iframe {

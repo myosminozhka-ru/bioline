@@ -46,20 +46,19 @@
                 font-size: 24px;
                 line-height: 30px;
                 margin-bottom: 27px;
-                padding-left: 15px;
-                padding-right: 15px;
             }
         }
         &--list {
             padding: 0;
             margin: 0;
             list-style: none;
-            width: 100%;
-            max-width: 570px;
             li {
                 display: flex;
                 align-items: center;
                 margin-bottom: 20px;
+                @media all and (max-width: 640px) {
+                    align-items: flex-start;
+                }
             }
         }
         &--img {
@@ -73,6 +72,9 @@
             font-size: 20px;
             line-height: 140%;
             color: #3D3D3D;
+            @media all and (max-width: 640px) {
+                font-size: 14px;
+            }
         }
         &--r {
             width: 50%;
