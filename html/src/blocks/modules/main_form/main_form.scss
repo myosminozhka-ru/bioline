@@ -3,7 +3,6 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -117px;
     position: relative;
     z-index: 10;
     &__in {
@@ -14,9 +13,6 @@
     }
     @media all and (max-width: 1700px) {
         max-width: calc(100% - 30px);
-    }
-    @media all and (max-width: 640px) {
-        margin-bottom: -95px;
     }
     &__title {
         text-align: center;

@@ -19,7 +19,7 @@ $(function() {
           {
             breakpoint: 811,
             settings: {
-              dots: true,
+              // dots: true,
               slidesToShow: 1
             }
           }
