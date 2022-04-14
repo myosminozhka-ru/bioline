@@ -30,7 +30,7 @@
             }
         }
         &--title {
-            margin-bottom: 19px;
+            margin-bottom: 30px;
             font-family: 'gmm', serif;
             font-style: normal;
             font-weight: 500;
@@ -50,24 +50,29 @@
                 padding-right: 15px;
             }
         }
+        &--list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            width: 100%;
+            max-width: 570px;
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+        }
+        &--img {
+            flex: 0 0 40px;
+            margin-right: 20px;
+        }
         &--text {
-            font-family: 'gml', serif;
+            font-family: 'gm', serif;
             font-style: normal;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 20px;
             line-height: 140%;
             color: #3D3D3D;
-            max-width: 530px;
-            width: 100%;
-            @media all and (max-width: 980px) {
-                max-width: 100%;
-            }
-            @media all and (max-width: 640px) {
-                font-size: 14px;
-                padding-left: 15px;
-                padding-right: 15px;
-                line-height: 18px;
-            }
         }
         &--r {
             width: 50%;
