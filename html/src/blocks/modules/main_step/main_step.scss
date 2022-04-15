@@ -1,0 +1,166 @@
+.main_step {
+    margin-top: 120px;
+    @media all and (max-width: 1023px) {
+        margin-top: 80px;
+    }
+    &__title {
+        font-family: 'gmm', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        color: #26364B;
+        margin-bottom: 35px;
+        @media all and (max-width: 680px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+    &__subtitle {
+        font-family: 'gm', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: #3D3D3D;
+        margin-bottom: 40px;
+        @media all and (max-width: 680px) {
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+    }
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        position: relative;
+        @media all and (max-width: 1040px) {
+            flex-wrap: wrap;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            width: 83%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            top: 40px;
+            border: 1px dashed #FF5000;
+            z-index: 0;
+            @media all and (max-width: 1040px) {
+                display: none;
+            }
+        }
+        @media all and (max-width: 680px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__block {
+        width: calc(25% - 20px);
+        padding-right: 20px;
+        position: relative;
+        z-index: 1;
+        &:last-child {
+            .main_step__top-side:before {
+                display: none;
+            }
+        }
+        @media all and (max-width: 1040px) {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        @media all and (max-width: 680px) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    &__top-side {
+        margin-bottom: 20px;
+        display: flex;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 24px;
+            height: 24px;
+            top: 40px;
+            right: vw(55);
+            margin-top: -12px;
+            background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%2366C9BA'/%3E%3Cpath d='M15.8536 11.6707L9.85342 6.12962C9.65478 5.95245 9.33825 5.95754 9.14641 6.14098C8.95925 6.31993 8.95925 6.60361 9.14641 6.78254L14.7931 11.9972L9.14641 17.2119C8.9512 17.3922 8.9512 17.6845 9.14641 17.8648C9.34168 18.0451 9.65818 18.0451 9.85342 17.8648L15.8536 12.3237C16.0488 12.1433 16.0488 11.851 15.8536 11.6707Z' fill='white'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+            @media all and (max-width: 1040px) {
+                display: none;
+            }
+        }
+        @media all and (max-width: 680px) {
+            margin-bottom: 0;
+        }
+    }
+    &__img {
+        max-width: 80px;
+        width: 100%;
+        max-height: 80px;
+        height: 100%;
+        margin-right: 4px;
+        border-radius: 50%;
+        overflow: hidden;
+        @media all and (max-width: 680px) {
+            margin-bottom: 20px;    
+            margin-right: 0;
+        }
+    }
+    &__step {
+        font-family: 'gm', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: #FF5000;
+        padding-top: 15px;
+        @media all and (max-width: 680px) {
+            display: none;
+        }
+    }
+    &__text {
+        font-family: 'gm', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #3D3D3D;
+        @media all and (max-width: 680px) {
+            br {
+                display: none;
+            }
+        }
+    }
+    &__btn {
+        text-align: center;
+    }
+    &__link {
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+        background: #FF5000;
+        border: 2px solid #FF5000;
+        border-radius: 10px;
+        font-family: 'gmm', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 33px 5px;
+        display: block;
+        text-align: center;
+        transition: all .3s ease-out;
+        max-width: 428px;
+        width: 100%;
+        &:hover {
+            background: #fff;
+            color: #FF5000;
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 13px;
+            padding: 19px 5px;
+        }
+    }
+}
