@@ -14,6 +14,9 @@
     @media all and (max-width: 680px) {
         border-radius: 30px;
     }
+    .slick-slider {
+        overflow: hidden;
+    }
     &__sl {
         @media all and (max-width: 680px) {
             width: calc(100% + 15px);

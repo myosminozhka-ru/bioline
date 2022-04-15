@@ -5,6 +5,7 @@
     
     @media all and (max-width: 1023px) {
         background: none;
+        padding-bottom: 50px;
     }
     @media all and (max-width: 980px) {
         border-radius: 70px 0 70px 0;
@@ -297,7 +298,7 @@
         -webkit-transform: none;
         transform: none;
     }
-  }
+}
   @keyframes dvizheniyaUp {
     from {
     opacity: 0;

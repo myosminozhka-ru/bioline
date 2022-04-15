@@ -1126,7 +1126,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(".sl25-js").slick({
         dots: true,
         infinite: true,
-        speed: 2000,
+        speed: 4000,
         arrows: false,
         slidesToShow: 1,
         autoplay: true,
