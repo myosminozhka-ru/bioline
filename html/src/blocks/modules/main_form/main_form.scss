@@ -82,6 +82,7 @@
             padding: 20px 10px;
             border-radius: 20px;
             max-height: 350px;
+            overflow: unset;
         }
     }
     &__title {
@@ -181,6 +182,10 @@
         }
         &--radio {
             height: max-content !important;
+            @media all and (max-width: 640px) {
+                height: 200px !important;
+                overflow: auto;
+            }
         }
         transition: all 1s ease-out;
         visibility: hidden;
