@@ -1,14 +1,17 @@
 .main_sl {
-    margin-bottom: 20px;
+    margin-bottom: vw(20);
+    @media all and (max-width: 1023px) {
+        margin-bottom: 20px;
+    }
     &__title {
         font-family: 'gmm', serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 40px;
+        font-size: vw(40);
         line-height: 120%;
         color: #26364B;
-        margin-bottom: 40px;
-        @media all and (max-width: 640px) {
+        margin-bottom: vw(40);
+        @media all and (max-width: 1023px) {
             padding-left: 0px;
             padding-right: 0px;
             font-size: 24px;
@@ -28,9 +31,9 @@
         align-items: center;
         position: absolute;
         top: 50%;
-        margin-top: -80px;
-        right: 40px;
-        width: 10px;
+        margin-top: vw(-80);
+        right: vw(40);
+        width: vw(10);
         @media all and (max-width: 1023px) {
             margin: 0;
             top: unset;
@@ -51,12 +54,12 @@
                 margin: 0;
                 background: #BABABA;
                 border-radius: 5px;
-                width: 5px;
-                height: 5px;
+                width: vw(5);
+                height: vw(5);
                 padding: 0;
                 transition: all .3s ease-out;
-                margin-top: 15px;
-                margin-bottom: 15px;
+                margin-top: vw(15);
+                margin-bottom: vw(15);
                 &:before {
                     display: none !important;
                 }
@@ -64,12 +67,14 @@
                     margin: 0;
                     margin-left: 15px;
                     margin-right: 15px;
+                    width: 5px;
+                    height: 5px;
                 }
             }
             &.slick-active {
                 button {
-                    width: 10px;
-                    height: 20px;
+                    width: vw(10);
+                    height: vw(20);
                     background: #FF5000;
                     border-radius: 45px;   
                     @media all and (max-width: 1023px) {
@@ -102,13 +107,14 @@
             }
         }
         &--r {
-            max-width: 700px;
+            max-width: 50%;
             width: 100%;
             flex: none;
-            padding-left: 60px;
+            padding-left: vw(60);
             @media all and (max-width: 1023px) {
                 max-width: 100%;
-                padding-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
                 margin-top: 30px;
                 padding-bottom: 50px;
             }
@@ -117,16 +123,14 @@
             font-family: 'gmm', serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 40px;
+            font-size: vw(40);
             line-height: 120%;
-            max-width: 440px;
+            max-width: vw(440);
             width: 100%;
             color: #26364B;
-            margin-bottom: 30px;
+            margin-bottom: vw(30);
             @media all and (max-width: 1023px) {
                 max-width: 100%;
-            }
-            @media all and (max-width: 640px) {
                 font-size: 24px;
                 margin-bottom: 15px;
             }
@@ -135,15 +139,13 @@
             font-family: 'gm', serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 20px;
+            font-size: vw(20);
             line-height: 140%;
             color: #3D3D3D;
-            max-width: 530px;
+            max-width: vw(530);
             width: 100%;
             @media all and (max-width: 1023px) {
                 max-width: 100%;
-            }
-            @media all and (max-width: 640px) {
                 font-size: 18px;
             }
         }

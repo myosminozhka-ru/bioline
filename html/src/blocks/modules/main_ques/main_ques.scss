@@ -1,5 +1,5 @@
 .main_ques {
-    margin-bottom: 100px;
+    margin-bottom: vw(100);
     @media all and (max-width: 640px) {
         margin-bottom: 60px;
     }
@@ -7,9 +7,13 @@
         font-family: 'gmm', serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 40px;
+        font-size: vw(40);
         color: #26364B;
-        margin-bottom: 30px;
+        margin-bottom: vw(30);
+        @media all and (max-width: 1023px) {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
     }
     &__list {
         display: flex;
@@ -35,12 +39,12 @@
         font-family: 'gm', serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: vw(18);
         line-height: 140%;
         color: #3D3D3D;
         padding-right: 30px;
         cursor: pointer;
-        @media all and (max-width: 640px) {
+        @media all and (max-width: 1023px) {
             font-size: 14px;
         }
         &:before {
@@ -58,7 +62,7 @@
     }
     &__value {
         background: #DCF3EF;
-        border-radius: 30px;
+        border-radius: vw(30);
         font-family: 'gm', serif;
         font-style: normal;
         font-weight: 400;
@@ -74,10 +78,10 @@
         }
     }
     &__item {
-        padding-bottom: 20px;
-        margin-bottom: 20px;
+        padding-bottom: vw(20);
+        margin-bottom: vw(20);
         border-bottom: 1px solid #EAEAEA;
-        @media all and (max-width: 640px) {
+        @media all and (max-width: 1023px) {
             padding-bottom: 15px;
             margin-bottom: 15px;
             &:last-child {
@@ -95,10 +99,10 @@
                 opacity: 1;
                 visibility: visible;
                 pointer-events: all;
-                padding: 40px 30px;
-                margin-top: 20px;
-                font-size: 18px;
-                @media all and (max-width: 640px) {
+                padding: vw(40) vw(30);
+                margin-top: vw(20);
+                font-size: vw(18);
+                @media all and (max-width: 1023px) {
                     margin-top: 15px;
                     padding: 20px;
                     font-size: 14px;

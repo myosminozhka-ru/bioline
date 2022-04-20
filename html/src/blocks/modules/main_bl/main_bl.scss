@@ -1,6 +1,6 @@
 .main_bl {
-    padding-top: 130px;
-    padding-bottom: 150px;
+    padding-top: vw(130);
+    padding-bottom: vw(150);
     background: url('../img/bg_b.png') 100% calc(100% - 50px) no-repeat;
     
     @media all and (max-width: 1023px) {
@@ -18,32 +18,32 @@
     &__block {
         display: flex;
         align-items: center;
-        margin-bottom: 115px;
+        margin-bottom: vw(115);
         @media all and (max-width: 980px) {
             flex-direction: column;
             margin-bottom: 78px;
         }
         &--l {
             width: 50%;
-            @media all and (max-width: 980px) {
+            @media all and (max-width: 1023px) {
                 width: 100%;
                 margin-bottom: 23px;
             }
         }
         &--title {
-            margin-bottom: 30px;
+            margin-bottom: vw(30);
             font-family: 'gmm', serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 40px;
+            font-size: vw(40);
             line-height: 120%;
             color: #26364B;
-            @media all and (max-width: 980px) {
+            @media all and (max-width: 1023px) {
                 br {
                     display: none;
                 }
             }
-            @media all and (max-width: 640px) {
+            @media all and (max-width: 1023px) {
                 font-size: 24px;
                 line-height: 30px;
                 margin-bottom: 27px;
@@ -56,24 +56,28 @@
             li {
                 display: flex;
                 align-items: center;
-                margin-bottom: 20px;
-                @media all and (max-width: 640px) {
+                margin-bottom: vw(20);
+                @media all and (max-width: 1023px) {
                     align-items: flex-start;
                 }
             }
         }
         &--img {
-            flex: 0 0 40px;
-            margin-right: 20px;
+            flex: 0 0 vw(40);
+            margin-right: vw(20);
+            @media all and (max-width: 860px) {
+                flex: 0 0 40px;
+                margin-right: 20px;
+            }
         }
         &--text {
             font-family: 'gm', serif;
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
+            font-size: vw(20);
             line-height: 140%;
             color: #3D3D3D;
-            @media all and (max-width: 640px) {
+            @media all and (max-width: 1023px) {
                 font-size: 14px;
             }
         }
@@ -102,7 +106,7 @@
             }
         }
         &.block_phone {
-            margin-top: 188px;
+            margin-top: vw(188);
             @media all and (max-width: 980px) {
                 flex-direction: column-reverse;
             }

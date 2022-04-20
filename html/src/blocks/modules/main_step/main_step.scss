@@ -1,5 +1,5 @@
 .main_step {
-    margin-top: 120px;
+    margin-top: vw(120);
     @media all and (max-width: 1023px) {
         margin-top: 80px;
     }
@@ -7,10 +7,10 @@
         font-family: 'gmm', serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 40px;
+        font-size: vw(40);
         color: #26364B;
-        margin-bottom: 35px;
-        @media all and (max-width: 680px) {
+        margin-bottom: vw(35);
+        @media all and (max-width: 1023px) {
             font-size: 24px;
             margin-bottom: 20px;
         }
@@ -19,11 +19,11 @@
         font-family: 'gm', serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
+        font-size: vw(20);
         line-height: 140%;
         color: #3D3D3D;
-        margin-bottom: 40px;
-        @media all and (max-width: 680px) {
+        margin-bottom: vw(40);
+        @media all and (max-width: 1023px) {
             margin-bottom: 30px;
             font-size: 14px;
         }
@@ -31,10 +31,11 @@
     &__blocks {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 40px;
+        margin-bottom: vw(40);
         position: relative;
         @media all and (max-width: 1040px) {
             flex-wrap: wrap;
+            margin-bottom: 40px;
         }
         &:before {
             position: absolute;
@@ -43,14 +44,14 @@
             left: 0;
             right: 0;
             height: 1px;
-            top: 40px;
+            top: vw(40);
             border: 1px dashed #FF5000;
             z-index: 0;
             @media all and (max-width: 1040px) {
                 display: none;
             }
         }
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 1023px) {
             margin-bottom: 20px;
         }
     }
@@ -74,48 +75,50 @@
         }
     }
     &__top-side {
-        margin-bottom: 20px;
+        margin-bottom: vw(20);
         display: flex;
         position: relative;
         &:before {
             position: absolute;
             content: '';
-            width: 24px;
-            height: 24px;
-            top: 40px;
+            width: vw(24);
+            height: vw(24);
+            top: vw(40);
             right: vw(55);
-            margin-top: -12px;
+            margin-top: vw(-12);
             background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%2366C9BA'/%3E%3Cpath d='M15.8536 11.6707L9.85342 6.12962C9.65478 5.95245 9.33825 5.95754 9.14641 6.14098C8.95925 6.31993 8.95925 6.60361 9.14641 6.78254L14.7931 11.9972L9.14641 17.2119C8.9512 17.3922 8.9512 17.6845 9.14641 17.8648C9.34168 18.0451 9.65818 18.0451 9.85342 17.8648L15.8536 12.3237C16.0488 12.1433 16.0488 11.851 15.8536 11.6707Z' fill='white'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
             @media all and (max-width: 1040px) {
                 display: none;
             }
         }
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 1023px) {
             margin-bottom: 0;
         }
     }
     &__img {
-        max-width: 80px;
+        max-width: vw(80);
         width: 100%;
-        max-height: 80px;
+        max-height: vw(80);
         height: 100%;
-        margin-right: 4px;
+        margin-right: vw(4);
         border-radius: 50%;
         overflow: hidden;
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 1023px) {
             margin-bottom: 20px;    
             margin-right: 0;
+            max-height: 80px;
+            max-width: 80px;
         }
     }
     &__step {
         font-family: 'gm', serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
+        font-size: vw(14);
         line-height: 120%;
         color: #FF5000;
-        padding-top: 15px;
-        @media all and (max-width: 680px) {
+        padding-top: vw(15);
+        @media all and (max-width: 1023px) {
             display: none;
         }
     }
@@ -123,10 +126,11 @@
         font-family: 'gm', serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: vw(16);
         line-height: 140%;
         color: #3D3D3D;
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
             br {
                 display: none;
             }
@@ -145,14 +149,14 @@
         font-family: 'gmm', serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 24px;
+        font-size: vw(24);
         text-transform: uppercase;
         color: #FFFFFF;
-        padding: 33px 5px;
+        padding: vw(33) vw(5);
         display: block;
         text-align: center;
         transition: all .3s ease-out;
-        max-width: 428px;
+        max-width: vw(428);
         width: 100%;
         &:hover {
             background: #fff;
@@ -160,6 +164,7 @@
         }
         @media all and (max-width: 1023px) {
             font-size: 13px;
+            max-width: max-content;
             padding: 19px 5px;
         }
     }

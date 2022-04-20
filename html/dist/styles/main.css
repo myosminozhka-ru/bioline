@@ -1677,7 +1677,7 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 1.35417vw;
   color: #FF5000;
   border-bottom: 5px solid transparent;
   transition: all .3s ease-out;
@@ -1691,7 +1691,7 @@ img {
 
 .header__t--tb {
   width: 100%;
-  max-width: 965px;
+  max-width: 50.26042vw;
 }
 
 .header__t--tb ul {
@@ -1704,13 +1704,13 @@ img {
 }
 
 .header__t--tb ul li a {
-  margin-top: 10px;
-  padding-bottom: 5px;
+  margin-top: 0.52083vw;
+  padding-bottom: 0.26042vw;
   border-bottom: 5px solid transparent;
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.25vw;
   text-decoration: none;
   transition: all .3s ease-out;
   color: #26364B;
@@ -1728,7 +1728,7 @@ img {
 }
 
 .header__b--l {
-  flex: 0 0 521px;
+  flex: 0 0 27.13542vw;
   font-size: 0;
   background: radial-gradient(51% 50% at 50% 80%, #66C9BA 0%, rgba(226, 255, 251, 0) 100%);
   margin-right: 1.30208vw;
@@ -1750,10 +1750,10 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.08333vw;
   line-height: 120%;
   color: #26364B;
-  margin-bottom: 29px;
+  margin-bottom: 1.51042vw;
 }
 
 .header__b--title span {
@@ -1765,10 +1765,10 @@ img {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.04167vw;
   color: #3D3D3D;
   line-height: 140%;
-  max-width: 680px;
+  max-width: 35.41667vw;
   width: 100%;
   margin-bottom: 1.97917vw;
 }
@@ -1790,8 +1790,8 @@ img {
   font-size: 1.25vw;
   text-transform: uppercase;
   color: #FFFFFF;
-  padding: 1.82292vw 5px;
-  max-width: calc(60% - 30px);
+  padding: 1.82292vw 0.26042vw;
+  max-width: calc(60% - vw(30));
   width: 100%;
   display: block;
   text-align: center;
@@ -1818,14 +1818,14 @@ img {
 }
 
 .block_info {
-  max-width: 1668px;
+  max-width: 86.875vw;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   background: #66C9BA;
   border-radius: 30px;
-  padding-top: 45px;
-  padding-bottom: 2px;
+  padding-top: 2.34375vw;
+  padding-bottom: 0.10417vw;
   position: relative;
   bottom: -5.46875vw;
   margin-bottom: 12.76042vw;
@@ -1840,9 +1840,9 @@ img {
 
 .block_info__block {
   text-align: center;
-  padding: 0 30px;
+  padding: 0 1.5625vw;
   width: 25%;
-  margin-bottom: 30px;
+  margin-bottom: 1.5625vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1853,33 +1853,33 @@ img {
 }
 
 .block_info__block--img {
-  max-width: 90px;
+  max-width: 4.6875vw;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 1.5625vw;
 }
 
 .block_info__block--title {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.25vw;
   color: #FFFFFF;
 }
 
 .main_sl {
-  margin-bottom: 20px;
+  margin-bottom: 1.04167vw;
 }
 
 .main_sl__title {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.08333vw;
   line-height: 120%;
   color: #26364B;
-  margin-bottom: 40px;
+  margin-bottom: 2.08333vw;
 }
 
 .main_sl__slides {
@@ -1894,9 +1894,9 @@ img {
   align-items: center;
   position: absolute;
   top: 50%;
-  margin-top: -80px;
-  right: 40px;
-  width: 10px;
+  margin-top: -4.16667vw;
+  right: 2.08333vw;
+  width: 0.52083vw;
 }
 
 .main_sl .slick-dots li {
@@ -1910,12 +1910,12 @@ img {
   margin: 0;
   background: #BABABA;
   border-radius: 5px;
-  width: 5px;
-  height: 5px;
+  width: 0.26042vw;
+  height: 0.26042vw;
   padding: 0;
   transition: all .3s ease-out;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 0.78125vw;
+  margin-bottom: 0.78125vw;
 }
 
 .main_sl .slick-dots li button:before {
@@ -1923,8 +1923,8 @@ img {
 }
 
 .main_sl .slick-dots li.slick-active button {
-  width: 10px;
-  height: 20px;
+  width: 0.52083vw;
+  height: 1.04167vw;
   background: #FF5000;
   border-radius: 45px;
 }
@@ -1943,45 +1943,45 @@ img {
 }
 
 .main_sl__slide--r {
-  max-width: 700px;
+  max-width: 50%;
   width: 100%;
   flex: none;
-  padding-left: 60px;
+  padding-left: 3.125vw;
 }
 
 .main_sl__slide--title {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 2.08333vw;
   line-height: 120%;
-  max-width: 440px;
+  max-width: 22.91667vw;
   width: 100%;
   color: #26364B;
-  margin-bottom: 30px;
+  margin-bottom: 1.5625vw;
 }
 
 .main_sl__slide--text {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 1.04167vw;
   line-height: 140%;
   color: #3D3D3D;
-  max-width: 530px;
+  max-width: 27.60417vw;
   width: 100%;
 }
 
 .main_bl {
-  padding-top: 130px;
-  padding-bottom: 150px;
+  padding-top: 6.77083vw;
+  padding-bottom: 7.8125vw;
   background: url("../img/bg_b.png") 100% calc(100% - 50px) no-repeat;
 }
 
 .main_bl__block {
   display: flex;
   align-items: center;
-  margin-bottom: 115px;
+  margin-bottom: 5.98958vw;
 }
 
 .main_bl__block--l {
@@ -1989,11 +1989,11 @@ img {
 }
 
 .main_bl__block--title {
-  margin-bottom: 30px;
+  margin-bottom: 1.5625vw;
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.08333vw;
   line-height: 120%;
   color: #26364B;
 }
@@ -2007,19 +2007,19 @@ img {
 .main_bl__block--list li {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.04167vw;
 }
 
 .main_bl__block--img {
-  flex: 0 0 40px;
-  margin-right: 20px;
+  flex: 0 0 2.08333vw;
+  margin-right: 1.04167vw;
 }
 
 .main_bl__block--text {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.04167vw;
   line-height: 140%;
   color: #3D3D3D;
 }
@@ -2040,7 +2040,7 @@ img {
 }
 
 .main_bl__block.block_phone {
-  margin-top: 188px;
+  margin-top: 9.79167vw;
 }
 
 .main_bl__phone {
@@ -2717,32 +2717,32 @@ img {
 }
 
 .main_step {
-  margin-top: 120px;
+  margin-top: 6.25vw;
 }
 
 .main_step__title {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.08333vw;
   color: #26364B;
-  margin-bottom: 35px;
+  margin-bottom: 1.82292vw;
 }
 
 .main_step__subtitle {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.04167vw;
   line-height: 140%;
   color: #3D3D3D;
-  margin-bottom: 40px;
+  margin-bottom: 2.08333vw;
 }
 
 .main_step__blocks {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 2.08333vw;
   position: relative;
 }
 
@@ -2753,7 +2753,7 @@ img {
   left: 0;
   right: 0;
   height: 1px;
-  top: 40px;
+  top: 2.08333vw;
   border: 1px dashed #FF5000;
   z-index: 0;
 }
@@ -2770,7 +2770,7 @@ img {
 }
 
 .main_step__top-side {
-  margin-bottom: 20px;
+  margin-bottom: 1.04167vw;
   display: flex;
   position: relative;
 }
@@ -2778,20 +2778,20 @@ img {
 .main_step__top-side:before {
   position: absolute;
   content: '';
-  width: 24px;
-  height: 24px;
-  top: 40px;
+  width: 1.25vw;
+  height: 1.25vw;
+  top: 2.08333vw;
   right: 2.86458vw;
-  margin-top: -12px;
+  margin-top: -0.625vw;
   background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%2366C9BA'/%3E%3Cpath d='M15.8536 11.6707L9.85342 6.12962C9.65478 5.95245 9.33825 5.95754 9.14641 6.14098C8.95925 6.31993 8.95925 6.60361 9.14641 6.78254L14.7931 11.9972L9.14641 17.2119C8.9512 17.3922 8.9512 17.6845 9.14641 17.8648C9.34168 18.0451 9.65818 18.0451 9.85342 17.8648L15.8536 12.3237C16.0488 12.1433 16.0488 11.851 15.8536 11.6707Z' fill='white'/%3E%3C/svg%3E%0A") 50%/100% no-repeat;
 }
 
 .main_step__img {
-  max-width: 80px;
+  max-width: 4.16667vw;
   width: 100%;
-  max-height: 80px;
+  max-height: 4.16667vw;
   height: 100%;
-  margin-right: 4px;
+  margin-right: 0.20833vw;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -2800,17 +2800,17 @@ img {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.72917vw;
   line-height: 120%;
   color: #FF5000;
-  padding-top: 15px;
+  padding-top: 0.78125vw;
 }
 
 .main_step__text {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 0.83333vw;
   line-height: 140%;
   color: #3D3D3D;
 }
@@ -2829,14 +2829,14 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.25vw;
   text-transform: uppercase;
   color: #FFFFFF;
-  padding: 33px 5px;
+  padding: 1.71875vw 0.26042vw;
   display: block;
   text-align: center;
   transition: all .3s ease-out;
-  max-width: 428px;
+  max-width: 22.29167vw;
   width: 100%;
 }
 
@@ -2847,9 +2847,9 @@ img {
 
 .main_pref {
   background: url("../img/1.svg") 50%/cover no-repeat;
-  padding: 120px 0;
+  padding: 6.25vw 0;
   border-radius: 200px;
-  margin-top: 120px;
+  margin-top: 6.25vw;
 }
 
 .main_pref .slick-slider {
@@ -2860,16 +2860,16 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.08333vw;
   color: #26364B;
-  margin-bottom: 30px;
+  margin-bottom: 1.5625vw;
 }
 
 .main_pref__block {
   background: #FFFFFF;
   border: 1px solid #EAEAEA;
   border-radius: 20px;
-  padding: 68px 37px;
+  padding: 3.54167vw 1.92708vw;
   height: 100%;
   transition: all .3s ease-out;
 }
@@ -2887,38 +2887,38 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 0.83333vw;
   color: #FF5000;
-  margin-bottom: 10px;
+  margin-bottom: 0.52083vw;
 }
 
 .main_pref__name {
-  margin-bottom: 20px;
+  margin-bottom: 1.04167vw;
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 1.5625vw;
   line-height: 120%;
   color: #26364B;
 }
 
 .main_pref__text {
-  margin-bottom: 30px;
+  margin-bottom: 1.5625vw;
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 0.83333vw;
   line-height: 140%;
   color: #3D3D3D;
 }
 
 .main_pref__result span {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 1.04167vw;
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.25vw;
   color: #26364B;
 }
 
@@ -2931,18 +2931,18 @@ img {
 .main_pref__result ul li {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 12px;
+  margin-bottom: 0.625vw;
   min-height: 44px;
 }
 
 .main_pref__perc {
-  max-width: 54px;
+  max-width: 2.8125vw;
   width: 100%;
-  margin-right: 10px;
+  margin-right: 0.52083vw;
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.04167vw;
   color: #FF5000;
 }
 
@@ -2950,33 +2950,33 @@ img {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 0.83333vw;
   line-height: 140%;
   color: #3D3D3D;
 }
 
 .main_wrk {
-  padding-top: 120px;
+  padding-top: 6.25vw;
   overflow: hidden;
   background: url("data:image/svg+xml,%3Csvg width='1182' height='201' viewBox='0 0 1182 201' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1056' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3C/svg%3E%0A") calc(100% - 106px) calc(100% - 120px) no-repeat;
-  padding-bottom: 175px;
+  padding-bottom: 9.11458vw;
 }
 
 .main_wrk__title {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 2.5vw;
+  line-height: 140%;
   color: #26364B;
-  margin-bottom: 60px;
+  margin-bottom: 3.125vw;
 }
 
 .main_wrk__block {
   background: #FAFAFA;
   border: 1px solid #EAEAEA;
   border-radius: 20px;
-  padding: 26px 10px 37px 18px;
+  padding: 1.35417vw 0.52083vw 1.92708vw 0.9375vw;
   display: block;
   position: relative;
   text-decoration: none;
@@ -3014,17 +3014,17 @@ img {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 0.83333vw;
   color: #FF5000;
-  margin-bottom: 34px;
+  margin-bottom: 1.77083vw;
 }
 
 .main_wrk__info--name {
-  margin-bottom: 13px;
+  margin-bottom: 0.67708vw;
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 1.04167vw;
   line-height: 140%;
   color: #26364B;
 }
@@ -3033,13 +3033,13 @@ img {
   font-family: 'gml', serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 0.72917vw;
   color: #BABABA;
-  margin-bottom: 33px;
+  margin-bottom: 1.71875vw;
 }
 
 .main_wrk__info--r {
-  flex: 0 0 145px;
+  flex: 0 0 7.55208vw;
   margin-left: 5px;
 }
 
@@ -3050,11 +3050,11 @@ img {
 
 .main_wrk__info--spec span {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 0.78125vw;
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.72917vw;
   color: #26364B;
 }
 
@@ -3064,8 +3064,8 @@ img {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.72917vw;
+  line-height: 120%;
   color: #26364B;
 }
 
@@ -3341,21 +3341,21 @@ img {
 
 .main_map {
   border-radius: 200px;
-  margin-bottom: 120px;
+  margin-bottom: 6.25vw;
   background: url("data:image/svg+xml,%3Csvg width='1182' height='201' viewBox='0 0 1182 201' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1056' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1056' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1086' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1116' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1146' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1176' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='906' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='936' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='966' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='996' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='1026' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='756' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='786' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='816' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='846' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='876' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='606' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='636' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='666' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='696' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='726' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='6' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='33' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='60' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='87' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='114' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='141' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='168' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='456' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='486' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='516' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='546' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='576' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='306' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='336' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='366' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='396' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='426' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='156' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='186' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='216' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='246' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='276' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='36' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='66' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='96' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3Ccircle cx='126' cy='195' r='6' fill='%23F5EFEC' fill-opacity='0.5'/%3E%3C/svg%3E%0A") calc(100% - 106px) calc(100% - 304px) no-repeat;
 }
 
 .main_map__in {
-  padding-left: 28px;
-  padding-right: 28px;
+  padding-left: 1.45833vw;
+  padding-right: 1.45833vw;
 }
 
 .main_map__title {
-  margin-bottom: -15px;
+  margin-bottom: -0.78125vw;
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 2.5vw;
   color: #26364B;
 }
 
@@ -3366,9 +3366,9 @@ img {
 }
 
 .main_map__l {
-  margin-top: 75px;
+  margin-top: 3.90625vw;
   flex: 0 0 205px;
-  margin-right: 10px;
+  margin-right: 0.52083vw;
 }
 
 .main_map__l ul {
@@ -3440,28 +3440,28 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 1.875vw;
   color: #FFFFFF;
-  margin-bottom: 30px;
-  padding-right: 25px;
+  margin-bottom: 1.5625vw;
+  padding-right: 1.30208vw;
 }
 
 .main_map__l--txt {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.25vw;
+  line-height: 1.5625vw;
   color: #FFFFFF;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 1.82292vw;
 }
 
 .main_map__l--pp {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.25vw;
   text-align: center;
   text-transform: uppercase;
   color: #66C9BA;
@@ -3469,7 +3469,7 @@ img {
   cursor: pointer;
   width: 100%;
   border-radius: 10px;
-  padding: 13px 10px;
+  padding: 0.67708vw 0.52083vw;
   background: #fff;
   transition: all .3s ease-out;
   border: 1px solid #fff;
@@ -3483,18 +3483,18 @@ img {
 }
 
 .form_tit {
-  margin-bottom: 73px;
+  margin-bottom: 3.80208vw;
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 1.875vw;
   color: #26364B;
 }
 
 .form__btn {
   display: block;
   text-decoration: none;
-  padding: 31px 10px;
+  padding: 1.61458vw 0.52083vw;
   max-width: 448px;
   width: 100%;
   text-align: center;
@@ -3503,10 +3503,10 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.25vw;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 40px;
+  margin-bottom: 2.08333vw;
   transition: all .3s ease-out;
 }
 
@@ -3672,8 +3672,8 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
-  line-height: 45px;
+  font-size: 2.08333vw;
+  line-height: 2.34375vw;
   color: #26364B;
 }
 
@@ -3688,7 +3688,7 @@ img {
 
 .map_foot__link {
   margin-left: auto;
-  max-width: 409px;
+  max-width: 21.30208vw;
   width: 100%;
   text-decoration: none;
   background: #66C9BA;
@@ -3696,10 +3696,10 @@ img {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.25vw;
   text-transform: uppercase;
   color: #fff;
-  padding: 25px 10px;
+  padding: 1.30208vw 0.52083vw;
   display: block;
   text-align: center;
   transition: all .3s ease-out;
@@ -3712,16 +3712,16 @@ img {
 }
 
 .main_ques {
-  margin-bottom: 100px;
+  margin-bottom: 5.20833vw;
 }
 
 .main_ques__title {
   font-family: 'gmm', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.08333vw;
   color: #26364B;
-  margin-bottom: 30px;
+  margin-bottom: 1.5625vw;
 }
 
 .main_ques__list {
@@ -3742,7 +3742,7 @@ img {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 0.9375vw;
   line-height: 140%;
   color: #3D3D3D;
   padding-right: 30px;
@@ -3764,7 +3764,7 @@ img {
 
 .main_ques__value {
   background: #DCF3EF;
-  border-radius: 30px;
+  border-radius: 1.5625vw;
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: 400;
@@ -3778,8 +3778,8 @@ img {
 }
 
 .main_ques__item {
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 1.04167vw;
+  margin-bottom: 1.04167vw;
   border-bottom: 1px solid #EAEAEA;
 }
 
@@ -3792,29 +3792,29 @@ img {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-  padding: 40px 30px;
-  margin-top: 20px;
-  font-size: 18px;
+  padding: 2.08333vw 1.5625vw;
+  margin-top: 1.04167vw;
+  font-size: 0.9375vw;
 }
 
 .footer {
   background: #66C9BA url("../img/fot_bg.png") 0 0/cover no-repeat;
-  border-radius: 122px 112px 0 0;
-  padding-top: 43px;
-  padding-bottom: 18px;
+  border-radius: 6.35417vw 5.83333vw 0 0;
+  padding-top: 2.23958vw;
+  padding-bottom: 0.9375vw;
 }
 
 .footer__t {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 1.14583vw;
 }
 
 .footer__t--logo {
-  flex: 0 0 200px;
+  flex: 0 0 10.41667vw;
   font-size: 0;
-  margin-right: 140px;
+  margin-right: 7.29167vw;
 }
 
 .footer__t--menu {
@@ -3835,13 +3835,13 @@ img {
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.25vw;
   color: #FFFFFF;
-  margin-left: 20px;
+  margin-left: 1.04167vw;
   text-decoration: none;
   display: block;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin-bottom: 0.26042vw;
+  margin-top: 0.26042vw;
 }
 
 .footer__t--menu ul li a:hover {
@@ -3857,7 +3857,7 @@ img {
 .footer__b--copy {
   max-width: 206px;
   width: 100%;
-  margin-right: 10px;
+  margin-right: 0.52083vw;
   font-family: 'gm', serif;
   font-style: normal;
   font-weight: normal;
@@ -3977,6 +3977,7 @@ img {
     margin-left: 15px;
     margin-right: 15px;
     width: calc(100% - 30px);
+    max-width: 100%;
   }
 }
 
@@ -4040,12 +4041,6 @@ img {
   }
 }
 
-@media all and (max-width: 1400px) {
-  .footer__t--logo {
-    margin-right: 40px;
-  }
-}
-
 @media all and (max-width: 1390px) {
   .main_rev .slick-slide {
     margin: 0 20px;
@@ -4090,7 +4085,7 @@ img {
     width: calc(50% - 10px);
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1.04167vw;
   }
 }
 
@@ -4117,6 +4112,7 @@ img {
 @media all and (max-width: 1040px) {
   .main_step__blocks {
     flex-wrap: wrap;
+    margin-bottom: 40px;
   }
 
   .main_step__blocks:before {
@@ -4130,13 +4126,6 @@ img {
 
   .main_step__top-side:before {
     display: none;
-  }
-}
-
-@media all and (max-width: 1035px) {
-  .footer__t {
-    flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -4291,6 +4280,8 @@ img {
   .burg__soc a {
     margin-left: 10px;
     margin-right: 10px;
+    width: 1.5625vw;
+    height: 1.5625vw;
     margin-bottom: 10px;
   }
 
@@ -4389,6 +4380,19 @@ img {
     font-size: 14px;
   }
 
+  .main_sl {
+    margin-bottom: 20px;
+  }
+
+  .main_sl__title {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 36px;
+    margin-top: 30px;
+  }
+
   .main_sl .slick-dots {
     margin: 0;
     top: unset;
@@ -4405,6 +4409,8 @@ img {
     margin: 0;
     margin-left: 15px;
     margin-right: 15px;
+    width: 5px;
+    height: 5px;
   }
 
   .main_sl .slick-dots li.slick-active button {
@@ -4428,17 +4434,21 @@ img {
 
   .main_sl__slide--r {
     max-width: 100%;
-    padding-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 30px;
     padding-bottom: 50px;
   }
 
   .main_sl__slide--title {
     max-width: 100%;
+    font-size: 24px;
+    margin-bottom: 15px;
   }
 
   .main_sl__slide--text {
     max-width: 100%;
+    font-size: 18px;
   }
 
   .main_bl {
@@ -4446,12 +4456,73 @@ img {
     padding-bottom: 50px;
   }
 
+  .main_bl__block--l {
+    width: 100%;
+    margin-bottom: 23px;
+  }
+
+  .main_bl__block--title br {
+    display: none;
+  }
+
+  .main_bl__block--title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 27px;
+  }
+
+  .main_bl__block--list li {
+    align-items: flex-start;
+  }
+
+  .main_bl__block--text {
+    font-size: 14px;
+  }
+
   .main_step {
     margin-top: 80px;
   }
 
+  .main_step__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .main_step__subtitle {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  .main_step__blocks {
+    margin-bottom: 20px;
+  }
+
+  .main_step__top-side {
+    margin-bottom: 0;
+  }
+
+  .main_step__img {
+    margin-bottom: 20px;
+    margin-right: 0;
+    max-height: 80px;
+    max-width: 80px;
+  }
+
+  .main_step__step {
+    display: none;
+  }
+
+  .main_step__text {
+    font-size: 16px;
+  }
+
+  .main_step__text br {
+    display: none;
+  }
+
   .main_step__link {
     font-size: 13px;
+    max-width: max-content;
     padding: 19px 5px;
   }
 
@@ -4461,14 +4532,146 @@ img {
     padding-bottom: 180px;
   }
 
+  .main_pref__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .main_pref__step {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .main_pref__name {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .main_pref__text {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  .main_pref__result span {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .main_pref__result ul li {
+    flex-direction: column;
+    min-height: 0;
+    margin-bottom: 0.52083vw;
+  }
+
+  .main_pref__perc {
+    margin-bottom: 5px;
+    margin-right: 0;
+    max-width: 100%;
+    font-size: 20px;
+  }
+
+  .main_pref__txt {
+    font-size: 12px;
+  }
+
   .main_wrk {
     padding-bottom: 180px;
     padding-top: 80px;
   }
 
+  .main_wrk__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 36px;
+    margin-top: 30px;
+  }
+
+  .main_wrk__block {
+    padding-bottom: 27px;
+    padding-left: 14px;
+    background: #fff;
+    border: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+
+  .main_wrk__info--tit {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .main_wrk__info--name {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .main_wrk__info--wrk {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  .main_wrk__info--r {
+    flex: 0 0 98px;
+  }
+
+  .main_wrk__info--spec span {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+
+  .main_wrk__info--spec p {
+    font-size: 12px;
+  }
+
   .main_map {
     margin-bottom: 80px;
     background: none;
+  }
+
+  .main_map__in {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main_map__title {
+    margin-bottom: 0;
+    font-family: 'gmm', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #26364B;
+  }
+
+  .main_map__l--title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .main_map__l--tit {
+    font-size: 24px;
+    margin-bottom: 26px;
+  }
+
+  .main_map__l--txt {
+    margin-bottom: 33px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .main_map__l--pp {
+    font-size: 14px;
+    padding: 11px 10px;
+  }
+
+  .form_tit {
+    font-size: 24px;
+    margin-bottom: 41px;
+  }
+
+  .form__btn {
+    font-size: 14px;
+    padding: 11px 10px;
+    margin-bottom: 20px;
   }
 
   .map_foot {
@@ -4485,6 +4688,8 @@ img {
 
   .map_foot__l {
     margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 23px;
     line-height: normal;
     width: 100%;
   }
@@ -4495,18 +4700,98 @@ img {
 
   .map_foot__link {
     margin-right: auto;
+    font-size: 13px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    max-width: 265px;
+  }
+
+  .main_ques__title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .main_ques__name {
+    font-size: 14px;
+  }
+
+  .main_ques__item {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
+  .main_ques__item:last-child {
+    border: 0;
+  }
+
+  .main_ques__item.active .main_ques__value {
+    margin-top: 15px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .footer__t {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .footer__t--logo {
+    margin: 0;
+    flex: none;
+    margin-bottom: 30px;
+    max-width: 118px;
+    width: 100%;
+    margin-right: 40px;
+  }
+
+  .footer__t--menu ul {
+    flex-direction: column;
+  }
+
+  .footer__t--menu ul li a {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .footer__b {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .footer__b--copy {
+    margin-bottom: 6px;
   }
 
   .footer__b--politic {
     margin-left: auto;
+    margin-bottom: 37px;
+  }
+
+  .footer__b--info {
+    flex-direction: column-reverse;
   }
 
   .footer__b--soc a {
-    margin-left: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
   }
 
   .footer__b--tel {
     margin-left: 20px;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+}
+
+@media all and (max-width: 1023зч) {
+  .footer {
+    padding-top: 16px;
+    border-radius: 70px 70px 0 0;
+    background: #66C9BA;
   }
 }
 
@@ -4518,15 +4803,6 @@ img {
   .main_bl__block {
     flex-direction: column;
     margin-bottom: 78px;
-  }
-
-  .main_bl__block--l {
-    width: 100%;
-    margin-bottom: 23px;
-  }
-
-  .main_bl__block--title br {
-    display: none;
   }
 
   .main_bl__block--r {
@@ -4573,10 +4849,6 @@ img {
     padding-bottom: 3.125vw;
   }
 
-  .main_map__title {
-    margin-bottom: 0;
-  }
-
   .main_map__l {
     flex: none;
     margin-right: 0px;
@@ -4590,6 +4862,11 @@ img {
 }
 
 @media all and (max-width: 860px) {
+  .main_bl__block--img {
+    flex: 0 0 40px;
+    margin-right: 20px;
+  }
+
   .main_form {
     min-height: 580px;
     margin-top: 80px;
@@ -4821,94 +5098,12 @@ img {
     padding-bottom: 42px;
   }
 
-  .map_foot__l {
-    font-size: 18px;
-    line-height: 23px;
-  }
-
   .map_foot__l br {
     display: block;
-  }
-
-  .map_foot__link {
-    font-size: 13px;
-    padding-top: 17px;
-    padding-bottom: 16px;
-    max-width: 265px;
-  }
-
-  .footer {
-    padding-top: 16px;
-    border-radius: 70px 70px 0 0;
-    background: #66C9BA;
-  }
-
-  .footer__t {
-    margin-bottom: 40px;
-  }
-
-  .footer__t--logo {
-    margin: 0;
-    flex: none;
-    margin-bottom: 30px;
-    max-width: 118px;
-    width: 100%;
-  }
-
-  .footer__t--menu ul {
-    flex-direction: column;
-  }
-
-  .footer__t--menu ul li a {
-    margin: 0;
-    font-size: 18px;
-    margin-bottom: 18px;
-  }
-
-  .footer__b {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .footer__b--copy {
-    font-size: 12px;
-    line-height: 15px;
-    margin-bottom: 6px;
-  }
-
-  .footer__b--politic {
-    font-size: 14px;
-    margin-bottom: 37px;
-  }
-
-  .footer__b--info {
-    flex-direction: column-reverse;
-  }
-
-  .footer__b--soc a {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 30px;
-  }
-
-  .footer__b--tel {
-    margin: 0;
-    margin-bottom: 32px;
   }
 }
 
 @media all and (max-width: 820px) {
-  .form_tit {
-    font-size: 24px;
-    margin-bottom: 41px;
-  }
-
-  .form__btn {
-    font-size: 14px;
-    padding: 11px 10px;
-    margin-bottom: 20px;
-  }
-
   .form-wrapper .form-wrapper-inner {
     padding: 60px 15px;
   }
@@ -4921,6 +5116,31 @@ img {
 }
 
 @media all and (max-width: 810px) {
+  .main_pref__block {
+    padding: 20px;
+    width: calc(100% - 40px) !important;
+  }
+
+  .main_pref .slick-slide {
+    margin-left: -30px;
+  }
+
+  .main_pref .slick-slide.slick-active {
+    margin-left: 30px;
+  }
+
+  .main_pref .slick-slide.slick-active:first-child {
+    margin-left: 0;
+  }
+
+  .main_pref .slick-slide.slick-active:last-child {
+    margin-left: 60px;
+  }
+
+  .main_pref .slick-slide.slick-active:last-child .main_pref__block {
+    width: 100% !important;
+  }
+
   .main_pref {
     position: relative;
     border-radius: 70px 0 70px 0;
@@ -5211,40 +5431,9 @@ img {
 }
 
 @media all and (max-width: 680px) {
-  .main_step__title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .main_step__subtitle {
-    margin-bottom: 30px;
-    font-size: 14px;
-  }
-
-  .main_step__blocks {
-    margin-bottom: 20px;
-  }
-
   .main_step__block {
     width: 100%;
     padding-right: 0;
-  }
-
-  .main_step__top-side {
-    margin-bottom: 0;
-  }
-
-  .main_step__img {
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
-
-  .main_step__step {
-    display: none;
-  }
-
-  .main_step__text br {
-    display: none;
   }
 
   .main_pref {
@@ -5254,107 +5443,13 @@ img {
   .main_pref__sl {
     width: calc(100% + 15px);
   }
-
-  .main_pref__title {
-    font-size: 24px;
-  }
-
-  .main_pref__block {
-    padding: 20px;
-    width: calc(100% - 40px) !important;
-  }
-
-  .main_pref .slick-slide {
-    margin-left: -30px;
-  }
-
-  .main_pref .slick-slide.slick-active {
-    margin-left: 30px;
-  }
-
-  .main_pref .slick-slide.slick-active:first-child {
-    margin-left: 0;
-  }
-
-  .main_pref .slick-slide.slick-active:last-child {
-    margin-left: 60px;
-  }
-
-  .main_pref .slick-slide.slick-active:last-child .main_pref__block {
-    width: 100% !important;
-  }
-
-  .main_pref__step {
-    font-size: 12px;
-    margin-bottom: 5px;
-  }
-
-  .main_pref__name {
-    font-size: 20px;
-  }
-
-  .main_pref__text {
-    font-size: 12px;
-  }
-
-  .main_pref__result span {
-    font-size: 20px;
-  }
-
-  .main_pref__result ul li {
-    flex-direction: column;
-    min-height: 0;
-    margin-bottom: 10px;
-  }
-
-  .main_pref__perc {
-    margin-bottom: 5px;
-    margin-right: 0;
-    max-width: 100%;
-  }
-
-  .main_pref__txt {
-    font-size: 12px;
-  }
 }
 
 @media all and (max-width: 640px) {
-  .main_sl__title {
-    padding-left: 0px;
-    padding-right: 0px;
-    font-size: 24px;
-    line-height: 30px;
-    margin-bottom: 36px;
-    margin-top: 30px;
-  }
-
-  .main_sl__slide--title {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-
-  .main_sl__slide--text {
-    font-size: 18px;
-  }
-
   .main_bl {
     padding-top: 50px;
     margin-bottom: -268px;
     padding-bottom: 226px;
-  }
-
-  .main_bl__block--title {
-    font-size: 24px;
-    line-height: 30px;
-    margin-bottom: 27px;
-  }
-
-  .main_bl__block--list li {
-    align-items: flex-start;
-  }
-
-  .main_bl__block--text {
-    font-size: 14px;
   }
 
   .main_bl__block--r iframe {
@@ -5368,51 +5463,6 @@ img {
   .main_wrk {
     background-position: calc(100% - 10px) calc(100% - 160px);
     background-size: 640px;
-  }
-
-  .main_wrk__title {
-    font-size: 24px;
-    line-height: 30px;
-    margin-bottom: 36px;
-    margin-top: 30px;
-  }
-
-  .main_wrk__block {
-    padding-bottom: 27px;
-    padding-left: 14px;
-    background: #fff;
-    border: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-  }
-
-  .main_wrk__info--tit {
-    margin-bottom: 20px;
-    font-size: 12px;
-  }
-
-  .main_wrk__info--name {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-
-  .main_wrk__info--wrk {
-    font-size: 12px;
-    margin-bottom: 30px;
-  }
-
-  .main_wrk__info--r {
-    flex: 0 0 98px;
-  }
-
-  .main_wrk__info--spec span {
-    margin-bottom: 15px;
-    font-size: 12px;
-  }
-
-  .main_wrk__info--spec p {
-    font-size: 12px;
-    line-height: 15px;
   }
 
   .main_ser {
@@ -5452,19 +5502,6 @@ img {
     border-top-right-radius: 0px;
   }
 
-  .main_map__in {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .main_map__title {
-    font-family: 'gmm', serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    color: #26364B;
-  }
-
   .main_map__l {
     padding-left: 15px;
     padding-right: 15px;
@@ -5479,28 +5516,8 @@ img {
     margin-bottom: 60px;
   }
 
-  .main_ques__name {
-    font-size: 14px;
-  }
-
   .main_ques__value {
     border-radius: 20px;
-  }
-
-  .main_ques__item {
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-  }
-
-  .main_ques__item:last-child {
-    border: 0;
-  }
-
-  .main_ques__item.active .main_ques__value {
-    margin-top: 15px;
-    padding: 20px;
-    font-size: 14px;
-    line-height: 18px;
   }
 }
 
@@ -5536,22 +5553,6 @@ img {
   .main_map__l--cls {
     top: 22px;
     right: 13px;
-  }
-
-  .main_map__l--tit {
-    font-size: 24px;
-    margin-bottom: 26px;
-  }
-
-  .main_map__l--txt {
-    margin-bottom: 33px;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .main_map__l--pp {
-    font-size: 14px;
-    padding: 11px 10px;
   }
 }
 

@@ -1,8 +1,8 @@
 .main_pref {
     background: url('../img/1.svg') 50% / cover no-repeat;
-    padding: 120px 0;
+    padding: vw(120) 0;
     border-radius: 200px;
-    margin-top: 120px;
+    margin-top: vw(120);
     @media all and (max-width: 1440px) {
         border-radius: 0;
     }
@@ -26,21 +26,22 @@
         font-family: 'gmm', serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 40px;
+        font-size: vw(40);
         color: #26364B;
-        margin-bottom: 30px;
-        @media all and (max-width: 680px) {
+        margin-bottom: vw(30);
+        @media all and (max-width: 1023px) {
             font-size: 24px;
+            margin-bottom: 30px;
         }
     }
     &__block {
         background: #FFFFFF;
         border: 1px solid #EAEAEA;
         border-radius: 20px;
-        padding: 68px 37px;
+        padding: vw(68) vw(37);
         height: 100%;
         transition: all .3s ease-out;
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 810px) {
             padding: 20px;
             width: calc(100% - 40px) !important;
         }
@@ -48,7 +49,7 @@
     .slick-slide {
         margin: 0px 10px;
         transition: all .3s ease-out;
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 810px) {
             margin-left: -30px;
             &.slick-active {
                 margin-left: 30px;
@@ -69,49 +70,52 @@
         font-family: 'gmm', serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
+        font-size: vw(16);
         color: #FF5000;
-        margin-bottom: 10px;
-        @media all and (max-width: 680px) {
+        margin-bottom: vw(10);
+        @media all and (max-width: 1023px) {
             font-size: 12px;
             margin-bottom: 5px;
         }
     }
     &__name {
-        margin-bottom: 20px;
+        margin-bottom: vw(20);
         font-family: 'gmm', serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 30px;
+        font-size: vw(30);
         line-height: 120%;
         color: #26364B;
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 1023px) {
             font-size: 20px;
+            margin-bottom: 20px;
         }
     }
     &__text {
-        margin-bottom: 30px;
+        margin-bottom: vw(30);
         font-family: 'gm', serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: vw(16);
         line-height: 140%;
         color: #3D3D3D;
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 1023px) {
             font-size: 12px;
+            margin-bottom: 30px;
         }
     }
     &__result {
         span {
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: vw(20);
             font-family: 'gmm', serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 24px;
+            font-size: vw(24);
             color: #26364B;
-            @media all and (max-width: 680px) {
+            @media all and (max-width: 1023px) {
                 font-size: 20px;
+                margin-bottom: 20px;
             }
         }
         ul {
@@ -121,39 +125,40 @@
             li {
                 display: flex;
                 align-items: flex-start;
-                margin-bottom: 12px;
+                margin-bottom: vw(12);
                 min-height: 44px;
-                @media all and (max-width: 680px) {
+                @media all and (max-width: 1023px) {
                     flex-direction: column;
                     min-height: 0;
-                    margin-bottom: 10px;
+                    margin-bottom: vw(10);
                 }
             }
         }
     }
     &__perc {
-        max-width: 54px;
+        max-width: vw(54);
         width: 100%;
-        margin-right: 10px;
+        margin-right: vw(10);
         font-family: 'gm', serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
+        font-size: vw(20);
         color: #FF5000;
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 1023px) {
             margin-bottom: 5px;
             margin-right: 0;
             max-width: 100%;
+            font-size: 20px;
         }
     }
     &__txt {
         font-family: 'gm', serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: vw(16);
         line-height: 140%;
         color: #3D3D3D;
-        @media all and (max-width: 680px) {
+        @media all and (max-width: 1023px) {
             font-size: 12px;
         }
     }
