@@ -1,24 +1,27 @@
 .main_form {
     &.results {
         .main_form__fr {
-            max-width: 1175px;
+            max-width: vw(1175);
+            @media all and (max-width: 860px) {
+                max-width: 100%;
+            }
         }
         .main_form__title {
             max-width: 100%;
-            @media all and (max-width: 640px) {
+            @media all and (max-width: 860px) {
                 text-align: left !important;
             }
         }
         .main_form__ques--title {
-            margin-bottom: 20px;
+            margin-bottom: vw(20);
             font-family: 'gm', serif;
             font-style: normal;
             font-weight: 700;
-            font-size: 18px;
+            font-size: vw(18);
             line-height: 140%;
             color: #FFFFFF;
-            margin-top: 40px;
-            @media all and (max-width: 640px) {
+            margin-top: vw(40);
+            @media all and (max-width: 860px) {
                 font-size: 16px;
                 line-height: 140%;
                 margin-bottom: 20px;
@@ -31,7 +34,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @media all and (max-width: 1080px) {
+        @media all and (max-width: 860px) {
             flex-direction: column;
         }
         &--l {
@@ -43,10 +46,10 @@
             font-family: 'gmm', serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 40px;
+            font-size: vw(40);
             color: #FFFFFF;
-            margin-bottom: 23px;
-            @media all and (max-width: 640px) {
+            margin-bottom: vw(23);
+            @media all and (max-width: 860px) {
                 font-size: 14px;
                 line-height: normal;
                 text-align: left;
@@ -59,10 +62,10 @@
             font-family: 'gm', serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 16px;
+            font-size: vw(16);
             line-height: 140%;
             color: #FFFFFF;
-            @media all and (max-width: 640px) {
+            @media all and (max-width: 860px) {
                 margin-bottom: 30px;
                 font-size: 12px;
                 line-height: 140%;
@@ -70,12 +73,12 @@
         }
         &--list {    
             width: calc(100% + 40px);
-            margin-bottom: 14px;
+            margin-bottom: vw(14);
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             flex-wrap: wrap;
-            @media all and (max-width: 960px) {
+            @media all and (max-width: 860px) {
                 width: 100%;
                 margin-bottom: 25px;
             }
@@ -84,28 +87,25 @@
                 padding: 0;
                 width: calc(50% - 20px);
                 margin: 0;
-                @media all and (max-width: 960px) {
-                    width: calc(50% - 20px);
-                }
-                @media all and (max-width: 768px) {
+                @media all and (max-width: 860px) {
                     width: 100%;
                 }
                 li {
-                    margin-bottom: 20px;
+                    margin-bottom: vw(20);
                     position: relative;
-                    padding-left: 40px;
+                    padding-left: vw(40);
                     &:before {
                         content: '';
                         position: absolute;
-                        width: 30px;
-                        height: 30px;
+                        width: vw(30);
+                        height: vw(30);
                         border-radius: 50%;
                         left: 0;
                         top: 50%;
-                        margin-top: -15px;
-                        border: 1px solid #fff;
+                        margin-top: vw(-15);
                         background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='14' stroke='white' stroke-width='2'/%3E%3Cpath d='M9 13L13.5 19L21 10' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A") 50% no-repeat;
-                        @media all and (max-width: 640px) {
+                        background-size: 100%;
+                        @media all and (max-width: 860px) {
                             width: 20px;
                             height: 20px;
                             background-size: 100%;
@@ -114,18 +114,18 @@
                     }
                     &.full_info {
                         &:before {
-                            @media all and (max-width: 640px) {
+                            @media all and (max-width: 860px) {
                                 margin-top: -35px;
                             }
                         }
                     }
-                    @media all and (max-width: 640px) {
+                    @media all and (max-width: 860px) {
                         margin-bottom: 20px;
                         padding-left: 30px;
                     }
                 }
             }
-            @media all and (max-width: 640px) {
+            @media all and (max-width: 860px) {
                 margin-bottom: 20px;
             }
         }
@@ -133,11 +133,11 @@
             font-family: 'gm', serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 16px;
+            font-size: vw(16);
             line-height: 140%;
             color: #FFFFFF;
-            margin-bottom: 5px;
-            @media all and (max-width: 640px) {
+            margin-bottom: vw(5);
+            @media all and (max-width: 860px) {
                 font-size: 12px;
                 line-height: 140%;
             }
@@ -146,33 +146,33 @@
             font-family: 'gm', serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 16px;
-            line-height: 20px;
+            font-size: vw(16);
+            line-height: 140%;
             color: #FFFFFF;
-            @media all and (max-width: 640px) {
+            @media all and (max-width: 860px) {
                 font-size: 14px;
                 line-height: 18px;
             }
         }
         &--btn {
-            margin-top: 42px;
+            margin-top: vw(42);
             display: block;
-            margin-left: 15px;
+            margin-left: vw(15);
             text-decoration: none;
-            margin-top: 24px;
+            margin-top: vw(24);
             margin-right: auto;
             background: #FF5000;
             border: 1px solid #FF5000;
             border-radius: 10px;
-            max-width: 340px;
+            max-width: vw(340);
             width: 100%;
-            padding: 18.5px 10px;
+            padding: vw(18.5) vw(10);
             text-align: center;
             font-family: 'gmm', serif;
             font-style: normal;
             font-weight: 500;
             transition: all .3s ease-out;
-            font-size: 20px;
+            font-size: vw(20);
             text-transform: uppercase;
             color: #FFFFFF;
             cursor: pointer;
@@ -182,40 +182,31 @@
                 background: #fff;
                 color: #FF5000;
             }
-            @media all and (max-width: 960px) {
-                margin-right: auto;
-                margin-left: auto;
-                max-width: 205px;
-                font-size: 13px;
-                padding: 16px 10px;
-            }
-            @media all and (max-width: 640px) {
+            @media all and (max-width: 860px) {
+                margin-top: 30px;
                 max-width: 100%;
                 padding: 12px 10px;
+                font-size: 13px;
             }
         }
         &--r {
             font-size: 0;
-            max-width: 476px;
+            max-width: vw(476);
             width: 100%;
-            margin-left: 10px;
-            @media all and (max-width: 1080px) {
-                margin-right: auto;
-                margin-left: auto;
-            }
-            @media all and (max-width: 640px) {
+            margin-left: vw(10);
+            @media all and (max-width: 860px) {
                 max-width: 170px;
             }
         }
         &--ovf {
-            max-height: 560px;
+            max-height: vw(560);
             height: auto;
             overflow: auto;
             overflow-x: hidden;
             > div:last-child {
                 margin-bottom: 0;
             }
-            @media all and (max-width: 640px) {
+            @media all and (max-width: 860px) {
                 max-height: 355px;
             }
         }
