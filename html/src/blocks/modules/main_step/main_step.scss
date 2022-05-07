@@ -68,6 +68,17 @@
         @media all and (max-width: 1040px) {
             width: 50%;
             margin-bottom: 20px;
+            &:before {
+                position: absolute;
+                content: '';
+                width: 50%;
+                left: 10px;
+                right: 0;
+                height: 1px;
+                top: 30px;
+                border: 1px dashed #FF5000;
+                z-index: 0;
+            }
         }
         @media all and (max-width: 680px) {
             width: 100%;
@@ -119,7 +130,7 @@
         color: #FF5000;
         padding-top: vw(15);
         @media all and (max-width: 1023px) {
-            display: none;
+            font-size: 13px;
         }
     }
     &__text {
@@ -130,7 +141,7 @@
         line-height: 140%;
         color: #3D3D3D;
         @media all and (max-width: 1023px) {
-            font-size: 16px;
+            font-size: 14px;
             br {
                 display: none;
             }
